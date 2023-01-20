@@ -29,10 +29,10 @@ const Navbar = () => {
       </nav>
       <div>
         <span>
-          <FaSignInAlt />?
+          <FaSignInAlt />
         </span>
         <span>
-          <FaShoppingBasket />?
+          <FaShoppingBasket />
         </span>
       </div>
     </section>
