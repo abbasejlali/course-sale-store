@@ -51,7 +51,6 @@
 .login_cart .login {
   background-color: rgb(232, 234, 246);
   color: rgb(126, 87, 194);
-  padding: 10px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -59,12 +58,15 @@
   -o-border-radius: 12px;
   cursor: pointer;
 }
-
+.login_cart .cart {
+  padding: 7px 10px;
+}
 .login_cart .login {
   display: flex;
   justify-content: center;
   margin-right: 0.5rem;
   align-items: center;
+  padding: 10px;
 }
 
 .login_cart .login span:first-child {
@@ -73,11 +75,18 @@
 
 .login_cart .login span:last-child {
   font-size: 22px;
+  display: flex;
+  margin-left: 0.25rem;
 }
 .login_cart .cart span {
   font-size: 22px;
 }
 
+.menu_icon_mobile {
+  font-size: 2.1rem;
+  color: #9c9c9c;
+  cursor: pointer;
+}
 @media screen and (min-width: 0px) {
   .menu_icon_mobile {
     display: flex;
