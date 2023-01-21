@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import logo from "../img/logo-100-50.png";
 
 // icons
-import { FaShoppingBasket, FaSignInAlt } from "react-icons/fa";
+import { FaBars, FaShoppingBasket, FaSignInAlt } from "react-icons/fa";
 
 // styles
 import styles from "./Navbar.module.css";
@@ -15,6 +15,9 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
     <section className={styles.main}>
+      <div className={styles.menu_icon_mobile}>
+        <FaBars />
+      </div>
       <Link to="/">
         <img src={logo} alt="logo" />
       </Link>

@@ -1,5 +1,5 @@
 .main {
-  max-width: 1152px;
+  max-width: 82%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -44,6 +44,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
+  width: fit-content;
 }
 .login_cart .cart,
 .login_cart .login {
@@ -76,5 +78,25 @@
   font-size: 22px;
 }
 
+@media screen and (min-width: 0px) {
+  .menu_icon_mobile {
+    display: flex;
+  }
+  .menu_nav {
+    display: none;
+  }
+  .main > a {
+    display: none;
+  }
+}
 @media screen and (min-width: 900px) {
+  .menu_icon_mobile {
+    display: none;
+  }
+  .menu_nav {
+    display: flex;
+  }
+  .main > a {
+    display: flex;
+  }
 }
