@@ -68,7 +68,10 @@ const Navbar = () => {
         </div>
       </section>
       {menu_mobile && (
-        <section className={styles.menu_bar}>
+        <section
+          className={styles.menu_bar}
+          //   style={{`${menu_mobile && transform: "translateX(0vw)"}` }}
+        >
           <div className={styles.menu_section}>
             <div onClick={clickHandler}>
               <FaTimes />
