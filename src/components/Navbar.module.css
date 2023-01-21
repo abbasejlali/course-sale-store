@@ -1,0 +1,80 @@
+.main {
+  max-width: 1152px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcfcfc;
+  min-height: 64px;
+  height: 100%;
+  margin: 8px auto 0 auto;
+  padding: 0 1rem;
+}
+.main img {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+.menu_nav {
+  width: fit-content;
+}
+.menu_ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.menu_ul li {
+  list-style: none;
+  margin: 0 0.75rem;
+}
+.menu_ul li a {
+  color: #343434;
+  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -ms-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  font-family: "myriad-bold";
+  font-size: 16px;
+}
+.menu_ul li a:hover {
+  color: #7e57c2;
+}
+.login_cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_cart .cart,
+.login_cart .login {
+  background-color: rgb(232, 234, 246);
+  color: rgb(126, 87, 194);
+  padding: 10px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  cursor: pointer;
+}
+
+.login_cart .login {
+  display: flex;
+  justify-content: center;
+  margin-right: 0.5rem;
+  align-items: center;
+}
+
+.login_cart .login span:first-child {
+  font-size: 1rem;
+}
+
+.login_cart .login span:last-child {
+  font-size: 22px;
+}
+.login_cart .cart span {
+  font-size: 22px;
+}
+
+@media screen and (min-width: 900px) {
+}

@@ -1,4 +1,6 @@
 import React from "react";
+
+// spa
 import { Link } from "react-router-dom";
 
 // img
@@ -7,12 +9,17 @@ import logo from "../img/logo-100-50.png";
 // icons
 import { FaShoppingBasket, FaSignInAlt } from "react-icons/fa";
 
+// styles
+import styles from "./Navbar.module.css";
+
 const Navbar = () => {
   return (
-    <section>
-      <img src={logo} alt="logo" />
-      <nav>
-        <ul>
+    <section className={styles.main}>
+      <Link to="/">
+        <img src={logo} alt="logo" />
+      </Link>
+      <nav className={styles.menu_nav}>
+        <ul className={styles.menu_ul}>
           <li>
             <Link to="/">Home Page</Link>
           </li>
@@ -27,13 +34,18 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <div>
-        <span>
-          <FaSignInAlt />
-        </span>
-        <span>
-          <FaShoppingBasket />
-        </span>
+      <div className={styles.login_cart}>
+        <div className={styles.login}>
+          <span>Login</span>
+          <span>
+            <FaSignInAlt />
+          </span>
+        </div>
+        <div className={styles.cart}>
+          <span>
+            <FaShoppingBasket />
+          </span>
+        </div>
       </div>
     </section>
   );
