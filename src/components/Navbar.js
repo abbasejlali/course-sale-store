@@ -67,32 +67,33 @@ const Navbar = () => {
           </div>
         </div>
       </section>
-      <section className={styles.menu_bar}>
-        <div className={styles.bottom_shadow}></div>
-        <div className={styles.menu_section}>
-          <div>
-            <FaTimes />
+      {menu_mobile && (
+        <section className={styles.menu_bar}>
+          <div className={styles.menu_section}>
+            <div onClick={clickHandler}>
+              <FaTimes />
+            </div>
+            <ul>
+              <li>
+                <FaHome />
+                <Link to="/">Home Page</Link>
+              </li>
+              <li>
+                <FaUserGraduate />
+                <Link to="/course">Courses</Link>
+              </li>
+              <li>
+                <FaComments />
+                <Link to="/comments">Comments</Link>
+              </li>
+              <li>
+                <FaUserTie />
+                <Link to="/about-us">About Us</Link>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <FaHome />
-              <Link to="/">Home Page</Link>
-            </li>
-            <li>
-              <FaUserGraduate />
-              <Link to="/course">Courses</Link>
-            </li>
-            <li>
-              <FaComments />
-              <Link to="/comments">Comments</Link>
-            </li>
-            <li>
-              <FaUserTie />
-              <Link to="/about-us">About Us</Link>
-            </li>
-          </ul>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };
