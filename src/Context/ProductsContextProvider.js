@@ -10,6 +10,8 @@ import REACT from "../img/REACT.png";
 import ts from "../img/ts.png";
 import sass from "../img/sass.png";
 
+export const ProductsContext = React.createContext();
+
 const ProductsContextProvider = ({ children }) => {
   const data = [
     {
@@ -83,7 +85,6 @@ const ProductsContextProvider = ({ children }) => {
     setProducts(data);
   }, []);
 
-  const ProductsContext = React.createContext();
   return (
     <div>
       <ProductsContext.Provider value={products}>
