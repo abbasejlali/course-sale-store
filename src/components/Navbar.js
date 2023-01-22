@@ -49,7 +49,7 @@ const Navbar = () => {
               <Link to="/comments">Comments</Link>
             </li>
             <li>
-              <Link to="/aboutus">About Us</Link>
+              <Link to="/about-us">About Us</Link>
             </li>
           </ul>
         </nav>
@@ -69,8 +69,16 @@ const Navbar = () => {
       </section>
       {menu_mobile && (
         <section
-          className={styles.menu_bar}
-          //   style={{`${menu_mobile && transform: "translateX(0vw)"}` }}
+          style={{
+            width: "100vw",
+            height: "100wh",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            position: "absolute",
+            top: "0",
+            zIndex: "0",
+            transition: "left 5s ease-in-out",
+            left: `${menu_mobile ? "0" : "-100vw"}`,
+          }}
         >
           <div className={styles.menu_section}>
             <div onClick={clickHandler}>
@@ -83,7 +91,7 @@ const Navbar = () => {
               </li>
               <li>
                 <FaUserGraduate />
-                <Link to="/course">Courses</Link>
+                <Link to="/courses">Courses</Link>
               </li>
               <li>
                 <FaComments />

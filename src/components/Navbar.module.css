@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 .login_cart .cart {
-  padding: 7px 10px;
+  padding: 10px;
 }
 .login_cart .login {
   display: flex;
@@ -82,32 +82,13 @@
 }
 .login_cart .cart span {
   font-size: 22px;
+  display: flex;
 }
 
 .menu_icon_mobile {
   font-size: 2.1rem;
   color: #9c9c9c;
   cursor: pointer;
-}
-
-.menu_bar {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transform: translateX(-100vw);
-  -webkit-transform: translateX(-100vw);
-  -moz-transform: translateX(-100vw);
-  -ms-transform: translateX(-100vw);
-  -o-transform: translateX(-100vw);
 }
 
 .menu_section {
