@@ -27,7 +27,9 @@ const Banner = () => {
             <Link to="/courses">View Courses</Link>
             <FaCaretRight />
           </div>
-          <Link to="/comments">Students Comments</Link>
+          <Link className={styles.link_comments} to="/comments">
+            Students Comments
+          </Link>
         </div>
       </div>
       <img src={banner} alt="banner" />
