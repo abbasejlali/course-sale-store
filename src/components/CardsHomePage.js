@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { ProductsContext } from "../Context/ProductsContextProvider";
 
 // components
-import CardHomePage from "./CardHomePage";
+import CardHomePage from "./CardHomePage.js";
 
 // styles
 import styles from "./CardsHomePage.module.css";
@@ -32,10 +32,9 @@ const CardsHomePage = () => {
         </ul>
       </div>
       <div className={styles.cards}>
-        {products.map((product) => (
-          <CardHomePage product={product} />
+        {products.map((item) => (
+          <CardHomePage key={item.id} data={item} />
         ))}
-        {console.log(products)}
       </div>
     </section>
   );

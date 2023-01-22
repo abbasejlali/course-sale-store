@@ -11,13 +11,11 @@ import ProductsContextProvider from "./Context/ProductsContextProvider";
 
 function App() {
   return (
-    <div className="App">
-      <ProductsContextProvider>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </ProductsContextProvider>
-    </div>
+    <ProductsContextProvider className="App">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </ProductsContextProvider>
   );
 }
 
