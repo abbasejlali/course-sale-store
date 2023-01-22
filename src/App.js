@@ -6,12 +6,17 @@ import { Route, Routes } from "react-router-dom";
 // components
 import HomePage from "./components/HomePage";
 
+// context
+import ProductsContextProvider from "./Context/ProductsContextProvider";
+
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-      </Routes>
+      <ProductsContextProvider>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </ProductsContextProvider>
     </div>
   );
 }
