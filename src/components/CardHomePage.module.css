@@ -1,0 +1,128 @@
+.card_main {
+  max-width: 20%;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: rgb(94 129 209 / 16%) 0px 8px 24px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  overflow: hidden;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.card_main > img {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  align-self: center;
+  padding-bottom: 16px;
+  object-fit: cover;
+}
+.card_main > h2 {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.card_clock {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.card_clock svg {
+  display: flex;
+  color: #7e57c2;
+  margin-right: 0.25rem;
+  font-size: 16px;
+}
+.card_clock span {
+  color: #7e57c2;
+  font-size: 14px;
+}
+.card_price_number {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.card_number {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  background-color: #e8eaf6;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+}
+.card_number svg {
+  display: flex;
+  color: rgb(94, 129, 209);
+  font-size: 18px;
+  margin-right: 0.25rem;
+}
+.card_number span {
+  color: rgb(94, 129, 209);
+  font-size: 13px;
+}
+
+.card_price {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+.card_buy {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.card_buy > a {
+  padding: 6px 25px;
+  color: white;
+  background-color: #7e57c2;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.card_buy > a:hover {
+  background-color: forestgreen;
+}
+
+.card_buy > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_buy > div a {
+  color: #7e57c2;
+  font-size: 16px;
+  margin-right: 0.25rem;
+}
+.card_buy > div svg {
+  display: flex;
+  color: #7e57c2;
+  font-size: 20px;
+}
