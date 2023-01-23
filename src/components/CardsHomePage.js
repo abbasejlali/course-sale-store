@@ -24,7 +24,7 @@ const CardsHomePage = () => {
       <div className={styles.titr_cards}>
         <ul>
           <li>
-            <h4>The latest courses</h4>
+            <h2>The latest courses</h2>
           </li>
           <li>
             <Link to="/courses">More</Link>

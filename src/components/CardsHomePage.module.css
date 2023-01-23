@@ -1,0 +1,58 @@
+.main_cards {
+  max-width: 82%;
+  width: 100%;
+  margin: 4rem auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.titr_cards {
+  max-width: 100%;
+  width: 100%;
+  min-height: 80px;
+  height: 100%;
+}
+.titr_cards ul {
+  max-width: 100%;
+  width: 100%;
+  min-height: 80px;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.titr_cards ul li:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titr_cards ul li:first-child::before {
+  content: "♥";
+  font-size: 2.5rem;
+  color: crimson;
+}
+.titr_cards ul li:first-child h2 {
+  font-size: 28px;
+  margin: 0 0 0 0.25rem;
+}
+.titr_cards ul li:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titr_cards ul li:last-child a {
+  color: #7e57c2;
+  font-size: 22px;
+  margin-right: 0.25rem;
+}
+.titr_cards ul li:last-child svg {
+  display: flex;
+  align-items: flex-end;
+  color: #7e57c2;
+  font-size: 20px;
+}

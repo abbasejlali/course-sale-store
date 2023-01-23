@@ -9,11 +9,13 @@ import { Link } from "react-router-dom";
 // styles
 import styles from "./CardHomePage.module.css";
 
+// img
+import github from "../img/github.png";
+
 const CardHomePage = (props) => {
-  //   const [img, title, price, clock, number] = product;
   return (
     <div className={styles.card_main}>
-      <img src={props.data.img} alt="img_product" />
+      <img src={github} alt="img_product" />
       <h2>{props.data.title}</h2>
       <div className={styles.card_clock}>
         <FaRegClock />
