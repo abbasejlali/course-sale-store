@@ -1,16 +1,17 @@
 import React, { useContext } from "react";
 
 // icons
-import { FaCaretRight } from "react-icons/fa";
+import { FaCaretRight, FaRegClock, FaUserGraduate } from "react-icons/fa";
 
 // spa
 import { Link } from "react-router-dom";
 
 // context
 import { ProductsContext } from "../Context/ProductsContextProvider";
+import CardHomePage from "./CardHomePage";
 
 // components
-import CardHomePage from "./CardHomePage.js";
+// import CardHomePage from "./CardHomePage.js";
 
 // styles
 import styles from "./CardsHomePage.module.css";
@@ -31,11 +32,9 @@ const CardsHomePage = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.cards}>
-        {products.map((item) => (
-          <CardHomePage key={item.id} data={item} />
-        ))}
-      </div>
+      {products.map((item) => (
+        <CardHomePage key={item.id} data={item} />
+      ))}
     </section>
   );
 };

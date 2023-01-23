@@ -80,9 +80,15 @@ const ProductsContextProvider = ({ children }) => {
     },
   ];
 
-  const [products, setProducts] = useState();
+  const [products, setProducts] = useState([]);
+
   useEffect(() => {
-    setProducts(data);
+    const pro = async () => {
+      const products = await setProducts(data);
+      return products;
+    };
+
+    pro();
   }, []);
 
   return (
