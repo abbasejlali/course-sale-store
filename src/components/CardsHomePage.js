@@ -32,9 +32,11 @@ const CardsHomePage = () => {
           </li>
         </ul>
       </div>
-      {products.map((item) => (
-        <CardHomePage key={item.id} data={item} />
-      ))}
+      <div className={styles.cards}>
+        {products.map((item) => (
+          <CardHomePage key={item.id} data={item} />
+        ))}
+      </div>
     </section>
   );
 };
