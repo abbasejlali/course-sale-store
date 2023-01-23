@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding: 0;
 }
 .titr_cards ul li:first-child {
@@ -33,11 +33,9 @@
 }
 .titr_cards ul li:first-child::before {
   content: "♥";
-  font-size: 2.5rem;
   color: crimson;
 }
 .titr_cards ul li:first-child h2 {
-  font-size: 28px;
   margin: 0 0 0 0.25rem;
 }
 .titr_cards ul li:last-child {
@@ -48,7 +46,7 @@
 
 .titr_cards ul li:last-child a {
   color: #7e57c2;
-  font-size: 22px;
+
   margin-right: 0.25rem;
 }
 .titr_cards ul li:last-child svg {
@@ -68,4 +66,29 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto 0 auto;
+}
+
+/* responsive */
+
+@media only screen and (min-width: 0) {
+  .titr_cards ul li:first-child h2 {
+    font-size: 24px;
+  }
+  .titr_cards ul li:first-child::before {
+    font-size: 2rem;
+  }
+  .titr_cards ul li:last-child a {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .titr_cards ul li:first-child h2 {
+    font-size: 28px;
+  }
+  .titr_cards ul li:first-child::before {
+    font-size: 2.5rem;
+  }
+  .titr_cards ul li:last-child a {
+    font-size: 22px;
+  }
 }
