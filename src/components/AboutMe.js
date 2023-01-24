@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // icons
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -10,14 +10,31 @@ import abbas from "../img/Untitled-3.png";
 import styles from "./AboutMe.module.css";
 
 const AboutMe = () => {
+  const [number, setNumber] = useState(1);
+
+  const numberplus = (e) => {
+    setNumber(number + 1);
+    if (number >= 3) {
+      setNumber(() => number - 2);
+    }
+  };
+  const numberminus = (e) => {
+    setNumber(number - 1);
+    if (number <= 1) {
+      setNumber(() => number + 2);
+    }
+  };
   return (
     <section className={styles.about_main}>
+      {console.log(number)}
+
       <div className={styles.about_textmain}>
-        <div>
-          <h4></h4>
-          <p></p>
-        </div>
-        <div>
+        <div
+          style={{
+            zIndex: `${number === 1 ? "4" : "3"}`,
+            transform: `${number === 1 ? "rotate(0deg)" : "rotate(4deg)"}`,
+          }}
+        >
           <h4>Why did I choose programming?</h4>
           <p>
             For me, programming was very ideal, the working conditions were not
@@ -26,7 +43,12 @@ const AboutMe = () => {
             product and seeing the final result.
           </p>
         </div>
-        <div>
+        <div
+          style={{
+            zIndex: `${number === 2 ? "4" : "2"}`,
+            transform: `${number === 2 ? "rotate(0deg)" : "rotate(8deg)"}`,
+          }}
+        >
           <h4>Am I satisfied with programming?</h4>
           <p>
             Every job has its own difficulties and challenges, and programming
@@ -36,7 +58,12 @@ const AboutMe = () => {
             things that benefit people always gives me the best feeling.
           </p>
         </div>
-        <div>
+        <div
+          style={{
+            zIndex: `${number === 3 ? "4" : "1"}`,
+            transform: `${number === 3 ? "rotate(0deg)" : "rotate(12deg)"}`,
+          }}
+        >
           <h4>Why did I become a programmer?</h4>
           <p>
             Since I was a child, I had a strong interest in computers, and this
@@ -50,10 +77,10 @@ const AboutMe = () => {
           </p>
         </div>
         <div>
-          <button>
+          <button onClick={numberminus}>
             <FaArrowLeft />
           </button>
-          <button>
+          <button onClick={numberplus}>
             <FaArrowRight />
           </button>
         </div>
