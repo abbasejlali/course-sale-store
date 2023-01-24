@@ -1,0 +1,115 @@
+.about_main {
+  max-width: 82%;
+  width: 100%;
+  min-height: 300px;
+  height: 100%;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about_main > .about_textmain {
+  max-width: 60%;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_textmain > div:nth-child(1),
+.about_textmain > div:nth-child(2),
+.about_textmain > div:nth-child(3),
+.about_textmain > div:nth-child(4) {
+  max-width: 500px;
+  width: 100%;
+  min-height: 233px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(126 87 194 / 16%) 0px 4px 12px;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  padding: 40px;
+  position: absolute;
+}
+.about_textmain > div:nth-child(1) {
+  top: 0;
+  z-index: 4;
+}
+.about_textmain > div:nth-child(2) {
+  z-index: 3;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  animation: 0.5s ease 0s 1 normal forwards running cAcSqz;
+  top: 0;
+  -webkit-animation: 0.5s ease 0s 1 normal forwards running cAcSqz;
+}
+
+.about_textmain > div:nth-child(3) {
+  z-index: 2;
+  transform: rotate(10deg);
+  animation: 0.5s ease 0s 1 normal forwards running llIlSY;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  top: 0;
+  -webkit-animation: 0.5s ease 0s 1 normal forwards running llIlSY;
+}
+.about_textmain > div:nth-child(4) {
+  z-index: 1;
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  top: 0;
+  -o-transform: rotate(10deg);
+}
+.about_textmain > div:nth-child(5) {
+  position: absolute;
+  top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_textmain > div:nth-child(5) button {
+  border: 0;
+  outline: none;
+  background-color: unset;
+  padding: 0;
+  cursor: pointer;
+}
+.about_textmain > div:nth-child(5) button:first-child svg {
+  margin-right: 1rem;
+}
+
+.about_textmain > div:nth-child(5) button svg {
+  display: flex;
+  color: rgb(126, 87, 194);
+  font-size: 28px;
+}
+
+.about_textmain > div > h4 {
+  font-size: 24px;
+  padding-bottom: 20px;
+  color: #7e57c2;
+}
+.about_textmain > div > p {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: justify;
+}
+
+.about_main > img {
+  width: 350px;
+  min-height: 450px;
+  object-fit: cover;
+}

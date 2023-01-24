@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Banner from "./Banner";
 import CardsHomePage from "./CardsHomePage";
+import AboutMe from "./AboutMe";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <Navbar />
       <Banner />
       <CardsHomePage />
+      <AboutMe />
     </div>
   );
 };
