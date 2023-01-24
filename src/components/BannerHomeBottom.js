@@ -9,6 +9,7 @@ import banner from "../img/mockup.webp";
 const BannerHomeBottom = () => {
   return (
     <div className={styles.banner_main}>
+      <div></div>
       <h4>
         Click <a href="https://instagram.com/abbas.ejlali1">here</a> to see my
         Instagram page

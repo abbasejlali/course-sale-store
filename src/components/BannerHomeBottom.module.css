@@ -1,0 +1,62 @@
+.banner_main {
+  max-width: 82%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.banner_main > div {
+  border-radius: 12px;
+  max-width: 100%;
+  width: 100%;
+  min-height: 95px;
+  height: 100%;
+  background: linear-gradient(90deg, #ba68c8, #f06292, #ffd54f);
+  position: relative;
+  z-index: 0;
+}
+.banner_main > h4 {
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+}
+
+.banner_main > img {
+  width: 300px;
+  height: 350px;
+  position: absolute;
+  z-index: 1;
+  right: -26px;
+  top: -168%;
+}
+
+/* responsive */
+
+@media only screen and (min-width: 0) {
+  .banner_main {
+    margin: 451px auto 192px auto;
+  }
+  .banner_main > h4 {
+    left: 0%;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+  }
+  .banner_main > img {
+    display: none;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .banner_main > h4 {
+    left: 4%;
+    font-size: 26px;
+    width: fit-content;
+  }
+  .banner_main > img {
+    display: flex;
+  }
+  .banner_main {
+    margin-top: 248px !important;
+  }
+}

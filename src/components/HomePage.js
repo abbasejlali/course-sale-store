@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Banner from "./Banner";
 import CardsHomePage from "./CardsHomePage";
 import AboutMe from "./AboutMe";
+import BannerHomeBottom from "./BannerHomeBottom";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Banner />
       <CardsHomePage />
       <AboutMe />
+      <BannerHomeBottom />
     </div>
   );
 };
