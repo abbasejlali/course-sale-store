@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import styles from "./CardHomePage.module.css";
 
 // img
-import github from "../img/github.png";
+import github from "../img/github80.png";
 
 const CardHomePage = (props) => {
   return (
