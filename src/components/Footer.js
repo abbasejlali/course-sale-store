@@ -27,9 +27,9 @@ const Footer = () => {
       <div className={styles.footer_content}>
         <div className={styles.footer_content_left}>
           <div className={styles.child_one}>
-            <Link to="/">
+            <a href="https://www.abbas-ejlali.ir">
               <img src={logosite} alt="logogsite" />
-            </Link>
+            </a>
             <div>
               <h2>Abbas Ejlali site</h2>
               <span>
@@ -51,18 +51,6 @@ const Footer = () => {
         </div>
         <div className={styles.footer_content_right}>
           <div className={styles.child_one}>
-            <h4>Secure payment</h4>
-            <a href="#">
-              <FaPaypal />
-            </a>
-            <a href="#">
-              <FaCcVisa />
-            </a>
-            <a href="#">
-              <FaBtc />
-            </a>
-          </div>
-          <div className={styles.child_two}>
             <h4>Sections Site</h4>
             <ul>
               <li>
@@ -75,19 +63,32 @@ const Footer = () => {
                 <Link to="/comments">Comments</Link>
               </li>
             </ul>
-
             <div>
               <a href="abbas.ejlali18@gmail.com">
                 <FaEnvelope />{" "}
               </a>
-              <a href="abbas.ejlali18@gmail.com">
+              <a href="https://github.com/abbasejlali">
                 <FaGithub />{" "}
               </a>
               <a href="abbas.ejlali18@gmail.com">
                 <FaTelegramPlane />{" "}
               </a>
-              <a href="abbas.ejlali18@gmail.com">
+              <a href="https://instagram.com/abbas.ejlali1">
                 <FaInstagram />{" "}
+              </a>
+            </div>
+          </div>
+          <div className={styles.child_two}>
+            <h4>Secure Payment</h4>
+            <div>
+              <a href="#">
+                <FaPaypal />
+              </a>
+              <a href="#">
+                <FaCcVisa />
+              </a>
+              <a href="#">
+                <FaBtc />
               </a>
             </div>
           </div>
@@ -95,7 +96,10 @@ const Footer = () => {
       </div>
       <div className={styles.footer_bottom}>
         <h4>
-          Made with ❤️ by <b>Abbas Ejlali</b>
+          Made with ❤️ by{" "}
+          <a href="https://www.abbas-ejlali.ir" target="_blank">
+            Abbas Ejlali
+          </a>
         </h4>
       </div>
     </footer>
