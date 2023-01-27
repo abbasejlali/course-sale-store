@@ -13,19 +13,16 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 .footer_content .footer_content_left {
-  max-width: 50%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 .footer_content .footer_content_right {
-  max-width: 40%;
-  width: 100%;
   min-height: 256px;
   height: 100%;
   display: flex;
@@ -33,7 +30,6 @@ footer {
   align-items: flex-start;
 }
 .footer_content_left .child_one {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -68,7 +64,6 @@ footer {
 }
 
 .footer_content_right .child_one {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -113,7 +108,6 @@ footer {
   font-size: 30px;
 }
 .footer_content_right .child_two {
-  width: 50%;
   min-height: 256px;
   height: 100%;
   display: flex;
@@ -146,4 +140,65 @@ footer {
 }
 .footer_bottom {
   padding: 16px 0;
+}
+
+/* Responsive */
+
+@media only screen and (min-width: 0) {
+  .footer_content {
+    flex-direction: column;
+  }
+  .footer_content .footer_content_left {
+    max-width: 100%;
+    width: 100%;
+  }
+  .footer_content .footer_content_right {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .footer_content_right .child_one {
+    width: 100%;
+  }
+  .footer_content_right .child_two {
+    width: 100%;
+  }
+  .footer_content_left .child_two p {
+    margin-bottom: 2.5rem;
+  }
+  .footer_content_left .child_one {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .footer_content_right .child_one {
+    width: 50%;
+  }
+  .footer_content_right .child_two {
+    width: 50%;
+  }
+  .footer_content .footer_content_right {
+    flex-direction: row;
+  }
+  .footer_content_left .child_one {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .footer_content {
+    flex-direction: row;
+  }
+  .footer_content .footer_content_left {
+    max-width: 50%;
+    width: 100%;
+  }
+  .footer_content .footer_content_right {
+    max-width: 40%;
+    width: 100%;
+  }
+  .footer_content_left .child_two p {
+    margin-bottom: 0rem;
+  }
 }
