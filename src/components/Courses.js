@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 // Components
 import Navbar from "./Navbar";
@@ -7,11 +7,22 @@ import Footer from "./Footer";
 
 // styles
 import styles from "./Cards.module.css";
+import styles1 from "./Courses.module.css";
 
-// pa
-import { Link } from "react-router-dom";
+// context
+import { ProductsContext } from "../Context/ProductsContextProvider";
+
+// components
+import Card from "./Card";
 
 const Courses = () => {
+  const products = useContext(ProductsContext);
+
+  const [check, setCheck] = useState(false);
+
+  const clickHandeler = () => {
+    setCheck(!check);
+  };
   return (
     <div>
       <Navbar />
@@ -24,13 +35,28 @@ const Courses = () => {
             <li>
               <h2>Programming Training Courses</h2>
             </li>
-            <li>
+            <li className={styles.li_checkout}>
               <span>Free Courses</span>
-              <input type="checkbox" />
+              <div className={styles1.checkbox_wrapper_20}>
+                <div className={styles1.switch}>
+                  <input
+                    id="one-20"
+                    className={styles1.input}
+                    type="checkbox"
+                    onClick={clickHandeler}
+                  />
+                  <label for="one-20" className={styles1.slider}></label>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
-        <Cards />
+        {check && (
+          <div className={styles.cards}>
+            <Card data={products[6]} />
+          </div>
+        )}
+        {!check && <Cards />}
       </div>
       <Footer />
     </div>

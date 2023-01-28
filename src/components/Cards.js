@@ -8,7 +8,7 @@ import React, { useContext } from "react";
 import { ProductsContext } from "../Context/ProductsContextProvider";
 
 // components
-import CardHomePage from "./Card";
+import Card from "./Card";
 
 // styles
 import styles from "./Cards.module.css";
@@ -20,7 +20,7 @@ const Cards = () => {
     <section>
       <div className={styles.cards}>
         {products.map((item) => (
-          <CardHomePage key={item.id} data={item} />
+          <Card key={item.id} data={item} />
         ))}
       </div>
     </section>
