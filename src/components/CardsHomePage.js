@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 // icons
 import { FaCaretRight } from "react-icons/fa";
@@ -7,19 +7,16 @@ import { FaCaretRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 // context
-import { ProductsContext } from "../Context/ProductsContextProvider";
 
 // components
-import CardHomePage from "./CardHomePage";
+import Cards from "./Cards";
 
 // styles
-import styles from "./CardsHomePage.module.css";
+import styles from "./Cards.module.css";
 
 const CardsHomePage = () => {
-  const products = useContext(ProductsContext);
-
   return (
-    <section className={styles.main_cards}>
+    <div className={styles.main_cards}>
       <div className={styles.titr_cards}>
         <ul>
           <li>
@@ -31,12 +28,8 @@ const CardsHomePage = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.cards}>
-        {products.map((item) => (
-          <CardHomePage key={item.id} data={item} />
-        ))}
-      </div>
-    </section>
+      <Cards />
+    </div>
   );
 };
 

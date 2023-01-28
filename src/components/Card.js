@@ -7,12 +7,12 @@ import { FaCaretRight, FaRegClock, FaUserGraduate } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 // styles
-import styles from "./CardHomePage.module.css";
+import styles from "./Card.module.css";
 
 // img
 import github from "../img/github80.png";
 
-const CardHomePage = (props) => {
+const Card = (props) => {
   return (
     <div className={styles.card_main}>
       <img src={github} alt="img_product" />
@@ -39,4 +39,4 @@ const CardHomePage = (props) => {
   );
 };
 
-export default CardHomePage;
+export default Card;
