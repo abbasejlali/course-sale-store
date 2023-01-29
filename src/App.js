@@ -11,6 +11,7 @@ import CommentsMain from "./components/CommentsMain";
 // context
 import ProductsContextProvider from "./Context/ProductsContextProvider";
 import CommentsContextProvider from "./Context/CommentsContextProvider";
+import AboutUs from "./components/AboutUs";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/comments" element={<CommentsMain />} />
+            <Route path="/about-us" element={<AboutUs />} />
           </Routes>
         </CommentsContextProvider>
       </ProductsContextProvider>
