@@ -14,7 +14,9 @@ const CommentsCard = ({ data_comments }) => {
     <div className={styles.comment_main}>
       <div className={styles.comment_text}>
         <div className={styles.comment_titr}>
-          <FaUserAlt />
+          <div>
+            <FaUserAlt />
+          </div>
           <div>
             <h5>{data_comments.student_name}</h5>
             <span>{data_comments.course_name}</span>

@@ -63,8 +63,13 @@ const CommentsContextProvider = ({ children }) => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    setData(data_comments);
-  }, []);
+    const datahandel = async () => {
+      const change_data = await setData(data_comments);
+      return change_data;
+    };
+
+    datahandel();
+  }, [data]);
   return (
     <div>
       <CommentsContext.Provider value={data}>
