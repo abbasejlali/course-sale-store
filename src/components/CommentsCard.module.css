@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 0 20px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 .comment_text {
@@ -58,4 +58,19 @@
 .comment_titr div:last-child span {
   font-size: 14px;
   margin-top: 8px;
+}
+.comment_text div:nth-child(2) p {
+  text-align: justify;
+  font-size: 15px;
+}
+.comment_video {
+  width: 420px;
+  height: 280px;
+}
+.comment_video video {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
