@@ -9,15 +9,18 @@ import Courses from "./components/Courses";
 
 // context
 import ProductsContextProvider from "./Context/ProductsContextProvider";
+import CommentsContextProvider from "./Context/CommentsContextProvider";
 
 function App() {
   return (
     <>
       <ProductsContextProvider>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/courses" element={<Courses />} />
-        </Routes>
+        <CommentsContextProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/courses" element={<Courses />} />
+          </Routes>
+        </CommentsContextProvider>
       </ProductsContextProvider>
     </>
   );
