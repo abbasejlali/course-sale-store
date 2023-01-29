@@ -25,7 +25,12 @@ const CommentsCard = ({ data_comments }) => {
         </div>
       </div>
       <div className={styles.comment_video}>
-        <video controls width="100%" height="100%">
+        <video
+          controls
+          width="100%"
+          height="100%"
+          poster="https://botostart.org/comments/kian-baban.png"
+        >
           <source src={video} type="video/mp4" />
         </video>
       </div>
