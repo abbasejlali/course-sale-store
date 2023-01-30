@@ -55,12 +55,14 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className={styles.login_cart}>
-            <div className={styles.login}>
-              <span>Login</span>
-              <span>
-                <FaSignInAlt />
-              </span>
-            </div>
+            <Link to="/login">
+              <div className={styles.login}>
+                <span>Login</span>
+                <span>
+                  <FaSignInAlt />
+                </span>
+              </div>
+            </Link>
             <div className={styles.cart}>
               <span>
                 <FaShoppingBasket />
