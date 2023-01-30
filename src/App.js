@@ -8,7 +8,7 @@ import HomePage from "./components/HomePage";
 import Courses from "./components/Courses";
 import CommentsMain from "./components/CommentsMain";
 import AboutUs from "./components/AboutUs";
-import LoginBox from "./components/LoginBox";
+import Login from "./components/Login";
 
 // context
 import ProductsContextProvider from "./Context/ProductsContextProvider";
@@ -24,7 +24,7 @@ function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/comments" element={<CommentsMain />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/login" element={<LoginBox />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </CommentsContextProvider>
       </ProductsContextProvider>
