@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // spa
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ import {
   FaBars,
   FaComments,
   FaHome,
+  FaRegUser,
   FaShoppingBasket,
   FaSignInAlt,
   FaTimes,
@@ -21,8 +22,22 @@ import {
 // styles
 import styles from "./Navbar.module.css";
 
+import { auth } from "./firebase";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const [menu_mobile, setMenu_mobile] = useState(false);
+
+  const [loding, setLoding] = useState(true);
+  const [user, setUser] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      await setUser(user);
+      setLoding(false);
+    });
+  }, [user]);
 
   const clickHandler = (e) => {
     setMenu_mobile(!menu_mobile);
@@ -55,14 +70,25 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className={styles.login_cart}>
-            <Link to="/login">
-              <div className={styles.login}>
-                <span>Login</span>
-                <span>
-                  <FaSignInAlt />
-                </span>
-              </div>
-            </Link>
+            {user ? (
+              <Link to="/dashboard">
+                <div className={styles.login}>
+                  <span>Dashboard</span>
+                  <span>
+                    <FaRegUser />
+                  </span>
+                </div>
+              </Link>
+            ) : (
+              <Link to="/login">
+                <div className={styles.login}>
+                  <span>Login</span>
+                  <span>
+                    <FaSignInAlt />
+                  </span>
+                </div>
+              </Link>
+            )}
             <div className={styles.cart}>
               <span>
                 <FaShoppingBasket />

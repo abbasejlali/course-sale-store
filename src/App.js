@@ -8,6 +8,7 @@ import HomePage from "./components/HomePage";
 import Courses from "./components/Courses";
 import CommentsMain from "./components/CommentsMain";
 import AboutUs from "./components/AboutUs";
+import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 
 // context
@@ -18,19 +19,18 @@ import UserContextProvider from "./Context/UserContextProvider";
 function App() {
   return (
     <>
-      <UserContextProvider>
-        <ProductsContextProvider>
-          <CommentsContextProvider>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/courses" element={<Courses />} />
-              <Route path="/comments" element={<CommentsMain />} />
-              <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-          </CommentsContextProvider>
-        </ProductsContextProvider>
-      </UserContextProvider>
+      <ProductsContextProvider>
+        <CommentsContextProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/comments" element={<CommentsMain />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </CommentsContextProvider>
+      </ProductsContextProvider>
     </>
   );
 }
