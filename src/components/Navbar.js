@@ -23,14 +23,12 @@ import {
 import styles from "./Navbar.module.css";
 
 import { auth } from "./firebase";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menu_mobile, setMenu_mobile] = useState(false);
 
   const [loding, setLoding] = useState(true);
   const [user, setUser] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
@@ -70,6 +68,7 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className={styles.login_cart}>
+            {console.log(user)}
             {user ? (
               <Link to="/dashboard">
                 <div className={styles.login}>
