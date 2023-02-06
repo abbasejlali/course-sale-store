@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 // spa
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // img
 import logo from "../img/logo-100-50.png";
@@ -22,20 +22,12 @@ import {
 // styles
 import styles from "./Navbar.module.css";
 
-import { auth } from "./firebase";
+// context
+import { UserContext } from "../Context/UserContextProvider";
 
 const Navbar = () => {
   const [menu_mobile, setMenu_mobile] = useState(false);
-
-  const [loding, setLoding] = useState(true);
-  const [user, setUser] = useState(false);
-
-  useEffect(() => {
-    auth.onAuthStateChanged(async (user) => {
-      await setUser(user);
-      setLoding(false);
-    });
-  }, [user]);
+  const user = useContext(UserContext);
 
   const clickHandler = (e) => {
     setMenu_mobile(!menu_mobile);

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // icons
 import {
@@ -15,25 +16,26 @@ import styles from "./Dashboard.module.css";
 // firebase
 import { auth } from "./firebase";
 
-const Dashboard = () => {
-  const [loding, setLoding] = useState(true);
-  const [user, setUser] = useState(false);
+// context
+import { UserContext } from "../Context/UserContextProvider";
 
-  useEffect(() => {
-    auth.onAuthStateChanged(async (user) => {
-      await setUser(user);
-      setLoding(false);
-    });
-  }, [user]);
+const Dashboard = () => {
+  const navigate = useNavigate();
+  const user = useContext(UserContext);
+
+  const exitHandeler = async () => {
+    await auth.signOut();
+    navigate("/login");
+  };
 
   return (
     <>
       <div className={styles.dashboard_main}>
-        {/* <div className={styles.dashboard_main_up}>
+        <div className={styles.dashboard_main_up}>
           <img src={user.photoURL} alt="photoprofile" />
           <h5>{user.bc.displayName}</h5>
           <span>{user.bc.email}</span>
-        </div> */}
+        </div>
         <ul className={styles.dashboard_main_bottom}>
           <li>
             <span>
@@ -53,7 +55,7 @@ const Dashboard = () => {
             </span>
             <span>license</span>
           </li>
-          <li>
+          <li onClick={exitHandeler}>
             <span>
               <FaSignInAlt />
             </span>
