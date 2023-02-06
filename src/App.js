@@ -8,13 +8,12 @@ import HomePage from "./components/HomePage";
 import Courses from "./components/Courses";
 import CommentsMain from "./components/CommentsMain";
 import AboutUs from "./components/AboutUs";
-import Dashboard from "./components/Dashboard";
+import DashboardMain from "./components/DashboardMain";
 import Login from "./components/Login";
 
 // context
 import ProductsContextProvider from "./Context/ProductsContextProvider";
 import CommentsContextProvider from "./Context/CommentsContextProvider";
-import UserContextProvider from "./Context/UserContextProvider";
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
             <Route path="/comments" element={<CommentsMain />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<DashboardMain />} />
           </Routes>
         </CommentsContextProvider>
       </ProductsContextProvider>

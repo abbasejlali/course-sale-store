@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // icons
-import { FaRegHeart } from "react-icons/fa";
+import {
+  FaBarcode,
+  FaHome,
+  FaRegHeart,
+  FaSignInAlt,
+  FaUserGraduate,
+} from "react-icons/fa";
 
 // styles
 import styles from "./Dashboard.module.css";
@@ -12,6 +18,7 @@ import { auth } from "./firebase";
 const Dashboard = () => {
   const [loding, setLoding] = useState(true);
   const [user, setUser] = useState(false);
+
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
       await setUser(user);
@@ -23,15 +30,36 @@ const Dashboard = () => {
     <>
       <div className={styles.dashboard_main}>
         <div className={styles.dashboard_main_up}>
-          {user.multiFactor.photoURL ? (
-            <img src={user.multiFactor.photoURL} alt="photoprofile" />
-          ) : (
-            <div>{user.bc.displayName}</div>
-          )}
+          <img src={user.photoURL} alt="photoprofile" />
           <h5>{user.bc.displayName}</h5>
           <span>{user.bc.email}</span>
         </div>
-        <div className={styles.dashboard_main_bottom}></div>
+        <ul className={styles.dashboard_main_bottom}>
+          <li>
+            <span>
+              <FaHome />
+            </span>
+            <span>User Accont</span>
+          </li>
+          <li>
+            <span>
+              <FaUserGraduate />
+            </span>
+            <span>My Courses</span>
+          </li>
+          <li>
+            <span>
+              <FaBarcode />
+            </span>
+            <span>license</span>
+          </li>
+          <li>
+            <span>
+              <FaSignInAlt />
+            </span>
+            <span>Exit</span>
+          </li>
+        </ul>
       </div>
       <div className={styles.dashboard_useraccont}>
         <h4>Abbas Ejlali</h4>

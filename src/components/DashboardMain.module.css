@@ -1,0 +1,9 @@
+.main {
+  margin: 50px auto 160px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 82%;
+  width: 100%;
+}
