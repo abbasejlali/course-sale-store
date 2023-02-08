@@ -39,15 +39,50 @@ const cartReducer = (state, action) => {
         ...state,
       };
 
+    case "DECREASE":
+      const indexD = state.selectedItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      state.selectedItems[indexD].quantity--;
+      return {
+        ...state,
+      };
+
+    case "CHECKOUT":
+      return {
+        ...state,
+        selectedItems: [],
+        itemsCounter: 0,
+        total: 0,
+        checkout: true,
+      };
+
+    case "CLEAR":
+      return {
+        ...state,
+        selectedItems: [],
+        itemsCounter: 0,
+        total: 0,
+        checkout: false,
+      };
+
     default:
       return state;
   }
 };
 
-const CartContextProvider = () => {
+const CartContext = React.createContext();
+
+const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  return <div></div>;
+  return (
+    <div>
+      <CartContext.Provider value={{ state, dispatch }}>
+        {children}
+      </CartContext.Provider>
+    </div>
+  );
 };
 
 export default CartContextProvider;
