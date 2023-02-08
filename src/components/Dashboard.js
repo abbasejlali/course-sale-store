@@ -23,9 +23,22 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const user = useContext(UserContext);
 
+  const [num, setNum] = useState(0);
+
   const exitHandeler = async () => {
     await auth.signOut();
     navigate("/login");
+  };
+
+  const num0Handeler = () => {
+    setNum(0);
+  };
+  const num1Handeler = () => {
+    setNum(1);
+  };
+
+  const num2Handeler = () => {
+    setNum(2);
   };
 
   return (
@@ -37,19 +50,19 @@ const Dashboard = () => {
           <span>{user.bc.email}</span>
         </div>
         <ul className={styles.dashboard_main_bottom}>
-          <li>
+          <li onClick={num0Handeler}>
             <span>
               <FaHome />
             </span>
             <span>User Accont</span>
           </li>
-          <li>
+          <li onClick={num1Handeler}>
             <span>
               <FaUserGraduate />
             </span>
             <span>My Courses</span>
           </li>
-          <li>
+          <li onClick={num2Handeler}>
             <span>
               <FaBarcode />
             </span>
@@ -64,18 +77,24 @@ const Dashboard = () => {
         </ul>
       </div>
       <div className={styles.dashboard_info}>
-        <div className={styles.dashboard_useraccont}>
-          <h4>Abbas Ejlali</h4>
-          <span>
-            Do you want to be a programmer? You have come to the right place{" "}
-            <FaRegHeart />
-          </span>
-          <p>
-            In the{" "}
-            <span style={{ color: "rgb(126, 87, 194) !important" }}></span>
-            My Courses section, you can see all the courses you attended and how
-            to access them.
-          </p>
+        <div className={styles.dashboard_iclude}>
+          {num === 0 && (
+            <div className={styles.dashboard_useraccont}>
+              <h4>Abbas Ejlali</h4>
+              <span>
+                Do you want to be a programmer? You have come to the right place{" "}
+                <FaRegHeart />
+              </span>
+              <p>
+                In the{" "}
+                <span style={{ color: "rgb(126, 87, 194) !important" }}></span>
+                My Courses section, you can see all the courses you attended and
+                how to access them.
+              </p>
+            </div>
+          )}
+          {num === 1 && <p>cards</p>}
+          {num === 2 && <p>license</p>}
         </div>
       </div>
     </>
