@@ -20,6 +20,27 @@ const cartReducer = (state, action) => {
         ...state,
         selectedItems: [...state.selectedItems],
       };
+
+    case "REMOVE_ITEM":
+      const delecte = state.selectedItems.filter(
+        (item) => item.id !== action.payload.id
+      );
+      return {
+        ...state,
+        selectedItems: [...delecte],
+      };
+
+    case "INCREASE":
+      const indexI = state.selectedItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      state.selectedItems[indexI].quantity++;
+      return {
+        ...state,
+      };
+
+    default:
+      return state;
   }
 };
 
