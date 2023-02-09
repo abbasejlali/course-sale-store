@@ -41,7 +41,9 @@ const Card = (props) => {
       </div>
       <div className={styles.card_buy}>
         {ProductTF(state, props.data.id) ? (
-          <button>continew buy</button>
+          <Link to="/cart" className={styles.btn_cart}>
+            continew buy
+          </Link>
         ) : (
           <Link
             onClick={() => dispatch({ type: "ADD_ITEM", payload: props.data })}
