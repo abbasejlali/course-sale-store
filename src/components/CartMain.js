@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 // styles
 import styles from "./CartMain.module.css";
@@ -6,7 +6,11 @@ import styles from "./CartMain.module.css";
 // components
 import Cartbox from "./Cartbox.js";
 
+// context
+import { CartContext } from "../Context/CartContextProvider";
+
 const CartMain = () => {
+  const { state } = useContext(CartContext);
   return (
     <div className={styles.cart_main}>
       <div className={styles.cart_list_courses}>
@@ -16,10 +20,11 @@ const CartMain = () => {
           </li>
         </ul>
         <div className={styles.list_main}>
-          <Cartbox />
+          {state.selectedItems.map((item) => (
+            <Cartbox key={item.id} products={item} />
+          ))}
         </div>
       </div>
-
       <div className={styles.cart_cost_courses}>
         <ul>
           <li>

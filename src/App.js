@@ -10,6 +10,7 @@ import CommentsMain from "./components/CommentsMain";
 import AboutUs from "./components/AboutUs";
 import DashboardMain from "./components/DashboardMain";
 import Login from "./components/Login";
+import Cart from "./components/Cart";
 
 // context
 import ProductsContextProvider from "./Context/ProductsContextProvider";
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/dashboard" element={<DashboardMain />} />
+                <Route path="/cart" element={<Cart />} />
               </Routes>
             </CommentsContextProvider>
           </ProductsContextProvider>
