@@ -1,0 +1,61 @@
+.cartbox {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.cartbox:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.cartbox img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 60px;
+}
+.cartbox > button {
+  padding: 6px 25px;
+  color: rgb(211, 47, 47);
+  background-color: white;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  border: 1px solid rgba(211, 47, 47, 0.5);
+  margin-left: auto;
+}
+.cartbox > button:hover {
+  cursor: pointer;
+
+  border: 1.25px solid rgba(211, 47, 47, 0.5);
+  background-color: rgba(211, 47, 47, 0.052);
+}
+/* query media */
+@media screen and (min-width: 0) {
+}
+@media screen and (min-width: 600px) {
+}
+@media screen and (min-width: 900px) {
+}
