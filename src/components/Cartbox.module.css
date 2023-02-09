@@ -28,6 +28,10 @@
   align-items: flex-start;
   margin-left: 60px;
 }
+.text span {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 1.5rem;
+}
 .cartbox > button {
   padding: 6px 25px;
   color: rgb(211, 47, 47);
@@ -54,8 +58,20 @@
 }
 /* query media */
 @media screen and (min-width: 0) {
+  .text h3 {
+    font-size: 16px;
+  }
+  .text span {
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 600px) {
 }
 @media screen and (min-width: 900px) {
+  .text h3 {
+    font-size: 18px;
+  }
+  .text span {
+    font-size: 16px;
+  }
 }

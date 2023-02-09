@@ -17,7 +17,8 @@
   list-style: square;
 }
 .cart_list_courses ul li::marker {
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(126, 87, 194);
 }
 
 .list_main {
@@ -33,4 +34,19 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+/* media query */
+
+@media screen and (min-width: 0) {
+  .cart_list_courses ul li {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .cart_list_courses ul li {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 900px) {
 }
