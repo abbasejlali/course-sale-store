@@ -11,6 +11,7 @@ import { CartContext } from "../Context/CartContextProvider";
 
 const CartMain = () => {
   const { state } = useContext(CartContext);
+
   return (
     <div className={styles.cart_main}>
       <div className={styles.cart_list_courses}>
@@ -37,8 +38,8 @@ const CartMain = () => {
             <span>1000 $</span>
           </div>
           <div className={styles.discount_box}>
-            <input type="text" />
-            <button>action</button>
+            <input type="text" placeholder="Discount" />
+            <button>Action</button>
           </div>
           <div className={styles.discount_text}>
             <span>Discount:</span>
