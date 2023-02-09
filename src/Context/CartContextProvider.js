@@ -50,7 +50,6 @@ const cartReducer = (state, action) => {
 
     case "CHECKOUT":
       return {
-        ...state,
         selectedItems: [],
         itemsCounter: 0,
         total: 0,
@@ -59,7 +58,6 @@ const cartReducer = (state, action) => {
 
     case "CLEAR":
       return {
-        ...state,
         selectedItems: [],
         itemsCounter: 0,
         total: 0,
@@ -71,13 +69,14 @@ const cartReducer = (state, action) => {
   }
 };
 
-const CartContext = React.createContext();
+export const CartContext = React.createContext();
 
 const CartContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
 
   return (
     <div>
+      {console.log(state.selectedItems)}
       <CartContext.Provider value={{ state, dispatch }}>
         {children}
       </CartContext.Provider>

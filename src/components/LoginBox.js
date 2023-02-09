@@ -2,9 +2,6 @@ import React, { useContext } from "react";
 import firebase from "firebase/app";
 import { auth } from "./firebase";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 // icons
 import { FaSignInAlt } from "react-icons/fa";
 

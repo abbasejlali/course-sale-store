@@ -15,23 +15,26 @@ import Login from "./components/Login";
 import ProductsContextProvider from "./Context/ProductsContextProvider";
 import CommentsContextProvider from "./Context/CommentsContextProvider";
 import UserContextProvider from "./Context/UserContextProvider";
+import CartContextProvider from "./Context/CartContextProvider";
 
 function App() {
   return (
     <>
       <UserContextProvider>
-        <ProductsContextProvider>
-          <CommentsContextProvider>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/courses" element={<Courses />} />
-              <Route path="/comments" element={<CommentsMain />} />
-              <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/dashboard" element={<DashboardMain />} />
-            </Routes>
-          </CommentsContextProvider>
-        </ProductsContextProvider>
+        <CartContextProvider>
+          <ProductsContextProvider>
+            <CommentsContextProvider>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/courses" element={<Courses />} />
+                <Route path="/comments" element={<CommentsMain />} />
+                <Route path="/about-us" element={<AboutUs />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/dashboard" element={<DashboardMain />} />
+              </Routes>
+            </CommentsContextProvider>
+          </ProductsContextProvider>
+        </CartContextProvider>
       </UserContextProvider>
     </>
   );
