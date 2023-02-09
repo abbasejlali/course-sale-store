@@ -93,12 +93,22 @@
   border: 1px solid rgb(126, 87, 194);
 }
 .discount_box button {
-  border: 1px solid rgba(126, 87, 194, 0.5);
+  border: 1px solid rgba(126, 87, 194, 0.319);
   color: rgb(126, 87, 194);
   border-radius: 4px;
   cursor: pointer;
   height: 39px;
   width: 20%;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.discount_box button:hover {
+  border: 1px solid rgba(126, 87, 194, 0.492);
+  background-color: rgba(126, 87, 194, 0.057);
 }
 
 /* media query */
