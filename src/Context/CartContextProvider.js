@@ -7,6 +7,18 @@ const initialState = {
   checkout: false,
 };
 
+const sumItems = (items) => {
+  const itemsCounter = items.reduce(
+    (total, products) => total + products.quantity,
+    0
+  );
+  const total = items.reduce(
+    (total, products) => total + products.price * products.quantity,
+    0
+  );
+  return { itemsCounter, total };
+};
+
 const cartReducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM":
@@ -19,6 +31,7 @@ const cartReducer = (state, action) => {
       return {
         ...state,
         selectedItems: [...state.selectedItems],
+        ...sumItems(state.selectedItems),
       };
 
     case "REMOVE_ITEM":
@@ -28,6 +41,7 @@ const cartReducer = (state, action) => {
       return {
         ...state,
         selectedItems: [...delecte],
+        ...sumItems(state.selectedItems),
       };
 
     case "INCREASE":
@@ -76,7 +90,6 @@ const CartContextProvider = ({ children }) => {
 
   return (
     <div>
-      {console.log(state.selectedItems)}
       <CartContext.Provider value={{ state, dispatch }}>
         {children}
       </CartContext.Provider>
