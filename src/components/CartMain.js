@@ -77,19 +77,19 @@ const CartMain = () => {
           </div>
           <div className={styles.discount_text}>
             <span>Discount:</span>
-            {state.discount === 0 && <span>0</span>}
-            {state.discount > 0 && <span>10%</span>}
+            {data.trim() === "off10" ? <span>10%</span> : <span>0%</span>}
           </div>
           <div className={styles.payable}>
             <span>Payable:</span>
-            <span>{state.discount} $</span>
+            {data.trim() === "off10" ? (
+              <span>{state.discount} $</span>
+            ) : (
+              <span>{state.total} $</span>
+            )}
           </div>
           <button onClick={() => dispatch({ type: "CHECKOUT" })}>
             Complete Purchase
           </button>
-          {state.checkout && console.log("yessss")}
-          {notify}
-          <ToastContainer />
         </div>
       </div>
     </div>
