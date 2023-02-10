@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 // styles
 import styles from "./CartMain.module.css";
@@ -11,6 +12,7 @@ import { CartContext } from "../Context/CartContextProvider";
 
 const CartMain = () => {
   const { state } = useContext(CartContext);
+  const navigate = useNavigate();
 
   return (
     <div className={styles.cart_main}>
@@ -21,6 +23,7 @@ const CartMain = () => {
           </li>
         </ul>
         <div className={styles.list_main}>
+          {state.selectedItems.length === 0 && navigate("/")}
           {state.selectedItems.map((item) => (
             <Cartbox key={item.id} products={item} />
           ))}
