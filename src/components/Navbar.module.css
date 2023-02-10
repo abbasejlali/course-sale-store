@@ -88,9 +88,10 @@
   display: flex;
   margin-left: 0.25rem;
 }
-.login_cart .cart span {
+.login_cart .cart a {
   font-size: 22px;
   display: flex;
+  color: rgb(126, 87, 194);
 }
 
 .menu_icon_mobile {

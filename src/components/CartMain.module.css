@@ -38,7 +38,11 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-
+.list_main .h3 {
+  text-align: center;
+  width: 100%;
+  color: lightcoral;
+}
 .cart_cost_courses {
   max-width: 30%;
   width: 100%;

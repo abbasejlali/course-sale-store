@@ -81,9 +81,9 @@ const Navbar = () => {
               </Link>
             )}
             <div className={styles.cart}>
-              <span>
+              <Link to="/cart">
                 <FaShoppingBasket />
-              </span>
+              </Link>
             </div>
           </div>
         </div>

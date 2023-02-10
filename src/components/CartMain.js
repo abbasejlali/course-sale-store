@@ -24,6 +24,9 @@ const CartMain = () => {
         </ul>
         <div className={styles.list_main}>
           {state.selectedItems.length === 0 && navigate("/")}
+          {state.selectedItems.length === 0 && (
+            <h3 className={styles.h3}>Sorry, your shopping cart is empty!</h3>
+          )}
           {state.selectedItems.map((item) => (
             <Cartbox key={item.id} products={item} />
           ))}
