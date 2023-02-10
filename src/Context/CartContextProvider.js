@@ -4,6 +4,7 @@ const initialState = {
   selectedItems: [],
   itemsCounter: 0,
   total: 0,
+  discount: 0,
   checkout: false,
 };
 
@@ -17,6 +18,11 @@ const sumItems = (items) => {
     0
   );
   return { itemsCounter, total };
+};
+
+const discount_number = (item) => {
+  const number_main = item.total - (item.total * 10) / 100;
+  return { discount: number_main };
 };
 
 const cartReducer = (state, action) => {
@@ -70,9 +76,14 @@ const cartReducer = (state, action) => {
         selectedItems: [],
         itemsCounter: 0,
         total: 0,
+        discount: 0,
         checkout: true,
       };
-
+    case "DISCOUNT":
+      return {
+        ...state,
+        ...discount_number(state),
+      };
     case "CLEAR":
       return {
         selectedItems: [],
@@ -93,7 +104,7 @@ const CartContextProvider = ({ children }) => {
 
   return (
     <div>
-      {console.log(state.checkout)}
+      {console.log(state.discount)}
       <CartContext.Provider value={{ state, dispatch }}>
         {children}
       </CartContext.Provider>

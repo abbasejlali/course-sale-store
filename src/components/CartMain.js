@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // toast package
 
@@ -19,9 +19,12 @@ import { CartContext } from "../Context/CartContextProvider";
 
 const CartMain = () => {
   const { state, dispatch } = useContext(CartContext);
-  const navigate = useNavigate();
   const notify = () => toast("Wow so easy!");
 
+  const [data, setData] = useState("");
+  const changeHandeler = (e) => {
+    setData(e.target.value);
+  };
   return (
     <div className={styles.cart_main}>
       <div className={styles.cart_list_courses}>
@@ -58,16 +61,28 @@ const CartMain = () => {
             <span>{state.total} $</span>
           </div>
           <div className={styles.discount_box}>
-            <input type="text" placeholder="Discount" />
-            <button>Action</button>
+            <input
+              type="text"
+              value={data}
+              placeholder="Discount"
+              onChange={changeHandeler}
+            />
+            {data.trim() === "off10" ? (
+              <button onClick={() => dispatch({ type: "DISCOUNT" })}>
+                Action
+              </button>
+            ) : (
+              <button>Action</button>
+            )}
           </div>
           <div className={styles.discount_text}>
             <span>Discount:</span>
-            <span>0 $</span>
+            {state.discount === 0 && <span>0</span>}
+            {state.discount > 0 && <span>10%</span>}
           </div>
           <div className={styles.payable}>
             <span>Payable:</span>
-            <span>{state.total} $</span>
+            <span>{state.discount} $</span>
           </div>
           <button onClick={() => dispatch({ type: "CHECKOUT" })}>
             Complete Purchase
