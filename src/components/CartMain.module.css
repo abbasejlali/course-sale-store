@@ -43,6 +43,11 @@
   width: 100%;
   color: lightcoral;
 }
+.list_main .h3_success {
+  text-align: center;
+  width: 100%;
+  color: lightgreen;
+}
 .cart_cost_courses {
   max-width: 30%;
   width: 100%;

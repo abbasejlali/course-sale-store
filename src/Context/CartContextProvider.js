@@ -32,6 +32,7 @@ const cartReducer = (state, action) => {
         ...state,
         selectedItems: [...state.selectedItems],
         ...sumItems(state.selectedItems),
+        checkout: false,
       };
 
     case "REMOVE_ITEM":
@@ -42,6 +43,7 @@ const cartReducer = (state, action) => {
         ...state,
         selectedItems: [...delecte],
         ...sumItems(delecte),
+        checkout: false,
       };
 
     case "INCREASE":
@@ -64,6 +66,7 @@ const cartReducer = (state, action) => {
 
     case "CHECKOUT":
       return {
+        ...state,
         selectedItems: [],
         itemsCounter: 0,
         total: 0,
@@ -90,6 +93,7 @@ const CartContextProvider = ({ children }) => {
 
   return (
     <div>
+      {console.log(state.checkout)}
       <CartContext.Provider value={{ state, dispatch }}>
         {children}
       </CartContext.Provider>

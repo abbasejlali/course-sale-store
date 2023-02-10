@@ -1,4 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
+
+// toast package
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// spa
 import { useNavigate } from "react-router-dom";
 
 // styles
@@ -11,8 +18,9 @@ import Cartbox from "./Cartbox.js";
 import { CartContext } from "../Context/CartContextProvider";
 
 const CartMain = () => {
-  const { state } = useContext(CartContext);
+  const { state, dispatch } = useContext(CartContext);
   const navigate = useNavigate();
+  const notify = () => toast("Wow so easy!");
 
   return (
     <div className={styles.cart_main}>
@@ -23,9 +31,15 @@ const CartMain = () => {
           </li>
         </ul>
         <div className={styles.list_main}>
-          {state.selectedItems.length === 0 && navigate("/")}
-          {state.selectedItems.length === 0 && (
+          {/* {state.selectedItems.length === 0 && navigate("/")} */}
+          {state.selectedItems.length === 0 && state.checkout === false && (
             <h3 className={styles.h3}>Sorry, your shopping cart is empty!</h3>
+          )}
+          {state.checkout && (
+            <h3 className={styles.h3_success}>
+              Congratulations, you have successfully purchased from Abbas Ejlali
+              website
+            </h3>
           )}
           {state.selectedItems.map((item) => (
             <Cartbox key={item.id} products={item} />
@@ -55,7 +69,12 @@ const CartMain = () => {
             <span>Payable:</span>
             <span>{state.total} $</span>
           </div>
-          <button>Complete Purchase</button>
+          <button onClick={() => dispatch({ type: "CHECKOUT" })}>
+            Complete Purchase
+          </button>
+          {state.checkout && console.log("yessss")}
+          {notify}
+          <ToastContainer />
         </div>
       </div>
     </div>
