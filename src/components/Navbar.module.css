@@ -93,6 +93,27 @@
   display: flex;
   color: rgb(126, 87, 194);
 }
+.login_cart .cart {
+  position: relative;
+}
+.login_cart .cart span {
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: rgb(239, 57, 78);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
 
 .menu_icon_mobile {
   font-size: 2.1rem;

@@ -41,7 +41,7 @@ const cartReducer = (state, action) => {
       return {
         ...state,
         selectedItems: [...delecte],
-        ...sumItems(state.selectedItems),
+        ...sumItems(delecte),
       };
 
     case "INCREASE":

@@ -41,7 +41,7 @@ const CartMain = () => {
         <div className={styles.cost_main}>
           <div className={styles.cost}>
             <span>total:</span>
-            <span>1000 $</span>
+            <span>{state.total} $</span>
           </div>
           <div className={styles.discount_box}>
             <input type="text" placeholder="Discount" />
@@ -53,7 +53,7 @@ const CartMain = () => {
           </div>
           <div className={styles.payable}>
             <span>Payable:</span>
-            <span>0 $</span>
+            <span>{state.total} $</span>
           </div>
           <button>Complete Purchase</button>
         </div>

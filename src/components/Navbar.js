@@ -24,10 +24,12 @@ import styles from "./Navbar.module.css";
 
 // context
 import { UserContext } from "../Context/UserContextProvider";
+import { CartContext } from "../Context/CartContextProvider";
 
 const Navbar = () => {
   const [menu_mobile, setMenu_mobile] = useState(false);
   const user = useContext(UserContext);
+  const { state } = useContext(CartContext);
 
   const clickHandler = (e) => {
     setMenu_mobile(!menu_mobile);
@@ -84,6 +86,7 @@ const Navbar = () => {
               <Link to="/cart">
                 <FaShoppingBasket />
               </Link>
+              <span>{state.itemsCounter}</span>
             </div>
           </div>
         </div>
