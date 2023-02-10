@@ -111,6 +111,62 @@
   background-color: rgba(126, 87, 194, 0.057);
 }
 
+.discount_text {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+.discount_text span:last-child {
+  color: rgb(239, 83, 80);
+}
+
+.payable {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.payable span:last-child {
+  color: rgb(87, 151, 91);
+}
+
+.cost_main > button {
+  padding: 10px 16px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(126, 87, 194);
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px,
+    rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
+  font-size: 17px;
+  border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  outline: 0;
+  cursor: pointer;
+  max-width: 100%;
+  width: 100%;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+.cost_main > button:hover {
+  background-color: rgb(100, 69, 152);
+  box-shadow: rgba(0, 0, 0, 0.226) 0px 3px 1px -2px,
+    rgba(0, 0, 0, 0.219) 0px 2px 2px 0px, rgba(0, 0, 0, 0.219) 0px 1px 5px 0px;
+}
+
 /* media query */
 
 @media screen and (min-width: 0) {
