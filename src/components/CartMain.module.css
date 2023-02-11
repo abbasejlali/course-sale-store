@@ -37,12 +37,27 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+.emptydiv {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 80px auto 160px auto;
+}
 .emptydiv .h3 {
   text-align: center;
   width: 100%;
-  color: lightcoral;
+  color: rgb(121, 127, 169);
+  font-weight: 800;
 }
 .emptydiv .img {
+  width: 200px;
+  height: 300px;
+  margin: 40px auto;
 }
 
 .list_main .h3_success {
@@ -149,7 +164,8 @@
 }
 
 .cost_main > button,
-.cost_main > a {
+.cost_main > a,
+.emptydiv > a {
   padding: 10px 16px;
   color: rgb(255, 255, 255);
   background-color: rgb(126, 87, 194);
@@ -167,10 +183,10 @@
   width: 100%;
   border: 0;
   transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: ;
+  -moz-transition: ;
+  -ms-transition: ;
+  -o-transition: ;
   font-weight: 600;
 }
 .cost_main > a {
@@ -178,9 +194,13 @@
   width: -webkit-fill-available;
   text-align: center;
 }
-
+.emptydiv > a {
+  width: 23%;
+  text-align: center;
+}
 .cost_main > button:hover,
-.cost_main > a:hover {
+.cost_main > a:hover,
+.emptydiv > a:hover {
   background-color: rgb(100, 69, 152);
   box-shadow: rgba(0, 0, 0, 0.226) 0px 3px 1px -2px,
     rgba(0, 0, 0, 0.219) 0px 2px 2px 0px, rgba(0, 0, 0, 0.219) 0px 1px 5px 0px;
@@ -202,6 +222,9 @@
     max-width: 100%;
     width: 100%;
   }
+  .emptydiv .h3 {
+    font-size: 18px;
+  }
 }
 @media screen and (min-width: 600px) {
   .cart_list_courses ul li,
@@ -218,5 +241,8 @@
   .cart_list_courses {
     max-width: 68%;
     width: 100%;
+  }
+  .emptydiv .h3 {
+    font-size: 24pxpx;
   }
 }

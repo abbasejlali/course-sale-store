@@ -25,9 +25,9 @@ const CartMain = () => {
     setData(e.target.value);
   };
   return (
-    <div className={styles.cart_main}>
+    <>
       {state.selectedItems.length === 0 && state.checkout === false && (
-        <div>
+        <div className={styles.emptydiv}>
           <h3 className={styles.h3}>Sorry, your shopping cart is empty!</h3>
           <img className={styles.img} src={empty_basket} alt="empty_basket" />
           <Link className={styles.a} to="/courses">
@@ -36,7 +36,7 @@ const CartMain = () => {
         </div>
       )}
       {state.selectedItems.length > 0 && (
-        <>
+        <div className={styles.cart_main}>
           <div className={styles.cart_list_courses}>
             <ul>
               <li>
@@ -104,9 +104,9 @@ const CartMain = () => {
               )}
             </div>
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 
