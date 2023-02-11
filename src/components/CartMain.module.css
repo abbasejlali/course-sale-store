@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 300px;
   height: 100%;
-  margin: 160px auto 200px auto;
+  margin: 80px auto 160px auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -171,7 +171,8 @@
   font-weight: 600;
 }
 .cost_main > a {
-  width: 90%;
+  width: fill-available;
+  width: -webkit-fill-available;
   text-align: center;
 }
 
