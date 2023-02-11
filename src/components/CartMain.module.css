@@ -37,11 +37,14 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
-.list_main .h3 {
+.emptydiv .h3 {
   text-align: center;
   width: 100%;
   color: lightcoral;
 }
+.emptydiv .img {
+}
+
 .list_main .h3_success {
   text-align: center;
   width: 100%;

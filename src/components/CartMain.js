@@ -13,6 +13,9 @@ import Cartbox from "./Cartbox.js";
 import { CartContext } from "../Context/CartContextProvider";
 import { UserContext } from "../Context/UserContextProvider";
 
+// img
+import empty_basket from "../img/empty-basket.webp";
+
 const CartMain = () => {
   const { state, dispatch } = useContext(CartContext);
 
@@ -23,75 +26,86 @@ const CartMain = () => {
   };
   return (
     <div className={styles.cart_main}>
-      <div className={styles.cart_list_courses}>
-        <ul>
-          <li>
-            <h4>List of courses</h4>
-          </li>
-        </ul>
-        <div className={styles.list_main}>
-          {/* {state.selectedItems.length === 0 && navigate("/")} */}
-          {state.selectedItems.length === 0 && state.checkout === false && (
-            <h3 className={styles.h3}>Sorry, your shopping cart is empty!</h3>
-          )}
-          {state.checkout && (
-            <h3 className={styles.h3_success}>
-              Congratulations, you have successfully purchased from Abbas Ejlali
-              website
-            </h3>
-          )}
-          {state.selectedItems.map((item) => (
-            <Cartbox key={item.id} products={item} />
-          ))}
+      {state.selectedItems.length === 0 && state.checkout === false && (
+        <div>
+          <h3 className={styles.h3}>Sorry, your shopping cart is empty!</h3>
+          <img className={styles.img} src={empty_basket} alt="empty_basket" />
+          <Link className={styles.a} to="/courses">
+            View courses
+          </Link>
         </div>
-      </div>
-      <div className={styles.cart_cost_courses}>
-        <ul>
-          <li>
-            <h4>Cost of courses</h4>
-          </li>
-        </ul>
-        <div className={styles.cost_main}>
-          <div className={styles.cost}>
-            <span>total:</span>
-            <span>{state.total} $</span>
+      )}
+      {state.selectedItems.length > 0 && (
+        <>
+          <div className={styles.cart_list_courses}>
+            <ul>
+              <li>
+                <h4>List of courses</h4>
+              </li>
+            </ul>
+            <div className={styles.list_main}>
+              {/* {state.selectedItems.length === 0 && navigate("/")} */}
+
+              {state.checkout && (
+                <h3 className={styles.h3_success}>
+                  Congratulations, you have successfully purchased from Abbas
+                  Ejlali website
+                </h3>
+              )}
+              {state.selectedItems.map((item) => (
+                <Cartbox key={item.id} products={item} />
+              ))}
+            </div>
           </div>
-          <div className={styles.discount_box}>
-            <input
-              type="text"
-              value={data}
-              placeholder="Discount"
-              onChange={changeHandeler}
-            />
-            {data.trim() === "off10" ? (
-              <button onClick={() => dispatch({ type: "DISCOUNT" })}>
-                Action
-              </button>
-            ) : (
-              <button>Action</button>
-            )}
+          <div className={styles.cart_cost_courses}>
+            <ul>
+              <li>
+                <h4>Cost of courses</h4>
+              </li>
+            </ul>
+            <div className={styles.cost_main}>
+              <div className={styles.cost}>
+                <span>total:</span>
+                <span>{state.total} $</span>
+              </div>
+              <div className={styles.discount_box}>
+                <input
+                  type="text"
+                  value={data}
+                  placeholder="Discount"
+                  onChange={changeHandeler}
+                />
+                {data.trim() === "off10" ? (
+                  <button onClick={() => dispatch({ type: "DISCOUNT" })}>
+                    Action
+                  </button>
+                ) : (
+                  <button>Action</button>
+                )}
+              </div>
+              <div className={styles.discount_text}>
+                <span>Discount:</span>
+                {data.trim() === "off10" ? <span>10%</span> : <span>0%</span>}
+              </div>
+              <div className={styles.payable}>
+                <span>Payable:</span>
+                {data.trim() === "off10" ? (
+                  <span>{state.discount} $</span>
+                ) : (
+                  <span>{state.total} $</span>
+                )}
+              </div>
+              {user ? (
+                <button onClick={() => dispatch({ type: "CHECKOUT" })}>
+                  Complete Purchase
+                </button>
+              ) : (
+                <Link to="/login">Login To Site</Link>
+              )}
+            </div>
           </div>
-          <div className={styles.discount_text}>
-            <span>Discount:</span>
-            {data.trim() === "off10" ? <span>10%</span> : <span>0%</span>}
-          </div>
-          <div className={styles.payable}>
-            <span>Payable:</span>
-            {data.trim() === "off10" ? (
-              <span>{state.discount} $</span>
-            ) : (
-              <span>{state.total} $</span>
-            )}
-          </div>
-          {user ? (
-            <button onClick={() => dispatch({ type: "CHECKOUT" })}>
-              Complete Purchase
-            </button>
-          ) : (
-            <Link to="/login">Login To Site</Link>
-          )}
-        </div>
-      </div>
+        </>
+      )}
     </div>
   );
 };
