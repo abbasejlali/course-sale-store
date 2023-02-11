@@ -7,10 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 .cart_list_courses {
-  max-width: 68%;
-  width: 100%;
   min-height: 100%;
   height: 100%;
 }
@@ -146,7 +145,8 @@
   color: rgb(87, 151, 91);
 }
 
-.cost_main > button {
+.cost_main > button,
+.cost_main > a {
   padding: 10px 16px;
   color: rgb(255, 255, 255);
   background-color: rgb(126, 87, 194);
@@ -170,7 +170,13 @@
   -o-transition: all 0.3s ease-in-out;
   font-weight: 600;
 }
-.cost_main > button:hover {
+.cost_main > a {
+  width: 90%;
+  text-align: center;
+}
+
+.cost_main > button:hover,
+.cost_main > a:hover {
   background-color: rgb(100, 69, 152);
   box-shadow: rgba(0, 0, 0, 0.226) 0px 3px 1px -2px,
     rgba(0, 0, 0, 0.219) 0px 2px 2px 0px, rgba(0, 0, 0, 0.219) 0px 1px 5px 0px;
@@ -183,6 +189,15 @@
   .cart_cost_courses ul li {
     font-size: 18px;
   }
+  .cart_cost_courses {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .cart_list_courses {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 600px) {
   .cart_list_courses ul li,
@@ -191,4 +206,13 @@
   }
 }
 @media screen and (min-width: 900px) {
+  .cart_cost_courses {
+    max-width: 30%;
+    width: 100%;
+    margin-top: 0rem;
+  }
+  .cart_list_courses {
+    max-width: 68%;
+    width: 100%;
+  }
 }

@@ -1,12 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
-// toast package
-
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 // spa
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // styles
 import styles from "./CartMain.module.css";
@@ -16,11 +11,12 @@ import Cartbox from "./Cartbox.js";
 
 // context
 import { CartContext } from "../Context/CartContextProvider";
+import { UserContext } from "../Context/UserContextProvider";
 
 const CartMain = () => {
   const { state, dispatch } = useContext(CartContext);
-  const notify = () => toast("Wow so easy!");
 
+  const user = useContext(UserContext);
   const [data, setData] = useState("");
   const changeHandeler = (e) => {
     setData(e.target.value);
@@ -87,9 +83,13 @@ const CartMain = () => {
               <span>{state.total} $</span>
             )}
           </div>
-          <button onClick={() => dispatch({ type: "CHECKOUT" })}>
-            Complete Purchase
-          </button>
+          {user ? (
+            <button onClick={() => dispatch({ type: "CHECKOUT" })}>
+              Complete Purchase
+            </button>
+          ) : (
+            <Link to="/login">Login To Site</Link>
+          )}
         </div>
       </div>
     </div>
