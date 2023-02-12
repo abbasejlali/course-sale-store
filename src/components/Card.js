@@ -54,25 +54,9 @@ const Card = (props) => {
             Buy
           </Link>
         )}
-
         {!user && !ProductTF(state, props.data.id) && (
           <Link onClick={() => toast.error("please login to site")}>Buy</Link>
         )}
-
-        {/* {ProductTF(state, props.data.id) ? (
-          <Link to="/cart" className={styles.btn_cart}>
-            continew buy
-          </Link>
-        ) : (
-          <Link
-            onClick={() => dispatch({ type: "ADD_ITEM", payload: props.data })}
-          >
-            Buy
-          </Link>
-        )} */}
-        {ProductTF(state, props.data.id)
-          ? console.log("true")
-          : console.log("false")}
         <div>
           <Link to="/courses/">View course</Link>
           <FaCaretRight />

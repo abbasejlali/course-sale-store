@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // spa
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 // styles
 import styles from "./CartMain.module.css";
@@ -18,12 +21,18 @@ import empty_basket from "../img/empty-basket.webp";
 
 const CartMain = () => {
   const { state, dispatch } = useContext(CartContext);
-
   const user = useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  const not = () => toast.success("asas");
+
   const [data, setData] = useState("");
+
   const changeHandeler = (e) => {
     setData(e.target.value);
   };
+
   return (
     <>
       {state.selectedItems.length === 0 && state.checkout === false && (
@@ -32,6 +41,27 @@ const CartMain = () => {
           <img className={styles.img} src={empty_basket} alt="empty_basket" />
           <Link className={styles.a} to="/courses">
             View courses
+          </Link>
+        </div>
+      )}
+      {state.selectedItems.length === 0 && state.checkout === true && (
+        <div
+          className={styles.list_main}
+          style={{
+            margin: "200px auto 200px auto",
+            maxWidth: "82%",
+            width: "100%",
+          }}
+        >
+          <h3 className={styles.h3_success}>
+            Congratulations, you have successfully purchased from Abbas Ejlali
+            website
+          </h3>
+          <Link
+            style={{ width: "100%", textAlign: "center", margin: "1rem 0" }}
+            to="/dashboard"
+          >
+            Go to Dashboard
           </Link>
         </div>
       )}
@@ -44,14 +74,12 @@ const CartMain = () => {
               </li>
             </ul>
             <div className={styles.list_main}>
-              {/* {state.selectedItems.length === 0 && navigate("/")} */}
-
-              {state.checkout && (
+              {/* {state.checkout && (
                 <h3 className={styles.h3_success}>
                   Congratulations, you have successfully purchased from Abbas
                   Ejlali website
                 </h3>
-              )}
+              )} */}
               {state.selectedItems.map((item) => (
                 <Cartbox key={item.id} products={item} />
               ))}

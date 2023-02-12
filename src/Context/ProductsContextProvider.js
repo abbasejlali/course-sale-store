@@ -67,7 +67,7 @@ const ProductsContextProvider = ({ children }) => {
       title: "Sass course",
       clock: 3,
       number: 4800,
-      price: "free",
+      price: 0,
       img: { sass },
     },
     {
