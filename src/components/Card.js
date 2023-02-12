@@ -17,12 +17,14 @@ import github from "../img/github80.png";
 
 // context
 import { CartContext } from "../Context/CartContextProvider";
+import { UserContext } from "../Context/UserContextProvider";
 
 // Function
 import { ProductTF } from "../helper/function";
 
 const Card = (props) => {
   const { state, dispatch } = useContext(CartContext);
+  const user = useContext(UserContext);
 
   return (
     <div className={styles.card_main}>
@@ -40,7 +42,24 @@ const Card = (props) => {
         <span className={styles.card_price}>{props.data.price} $</span>
       </div>
       <div className={styles.card_buy}>
-        {ProductTF(state, props.data.id) ? (
+        {user && ProductTF(state, props.data.id) && (
+          <Link to="/cart" className={styles.btn_cart}>
+            continew buy
+          </Link>
+        )}
+        {user && !ProductTF(state, props.data.id) && (
+          <Link
+            onClick={() => dispatch({ type: "ADD_ITEM", payload: props.data })}
+          >
+            Buy
+          </Link>
+        )}
+
+        {!user && !ProductTF(state, props.data.id) && (
+          <Link onClick={() => toast.error("please login to site")}>Buy</Link>
+        )}
+
+        {/* {ProductTF(state, props.data.id) ? (
           <Link to="/cart" className={styles.btn_cart}>
             continew buy
           </Link>
@@ -50,7 +69,7 @@ const Card = (props) => {
           >
             Buy
           </Link>
-        )}
+        )} */}
         {ProductTF(state, props.data.id)
           ? console.log("true")
           : console.log("false")}
