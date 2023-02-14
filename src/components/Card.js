@@ -58,7 +58,7 @@ const Card = (props) => {
           <Link onClick={() => toast.error("please login to site")}>Buy</Link>
         )}
         <div>
-          <Link to="/courses/">View course</Link>
+          <Link to={`/courses/${props.data.id}`}>View course</Link>
           <FaCaretRight />
         </div>
       </div>

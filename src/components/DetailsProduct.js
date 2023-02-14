@@ -1,10 +1,17 @@
 import React from "react";
 
-const DetailsProduct = () => {
+// Components
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import DetailsProductBox from "./DetailsProductBox";
+
+const DetailsProduct = (props) => {
   return (
-    <div>
-      <p>details</p>
-    </div>
+    <>
+      <Navbar />
+      <DetailsProductBox />
+      <Footer />
+    </>
   );
 };
 

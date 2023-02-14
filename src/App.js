@@ -1,7 +1,7 @@
 import React from "react";
 
 // spa
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 // components
 import HomePage from "./components/HomePage";
@@ -29,12 +29,12 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/courses" element={<Courses />} />
-                <Route path="/id" element={<DetailsProduct />} />
                 <Route path="/comments" element={<CommentsMain />} />
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/dashboard" element={<DashboardMain />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/courses/:id" element={<DetailsProduct />} />
               </Routes>
             </CommentsContextProvider>
           </ProductsContextProvider>
