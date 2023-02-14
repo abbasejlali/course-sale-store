@@ -1,19 +1,24 @@
+.product_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 16px 100px 16px;
+}
 .product_box {
   max-width: 82%;
   width: 100%;
   min-height: 300px;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 80px auto 80px auto;
   padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  box-shadow: rgb(94 129 209 / 16%) 0px 8px 24px;
 }
 .product_details {
-  max-width: 50%;
-  width: 100%;
-  min-height: 200px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -62,4 +67,93 @@
 }
 .btn_details button:hover {
   background-color: rgb(87, 151, 91);
+}
+.product_video {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.product_video video {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.product_icons {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product_icons > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  margin-top: 40px;
+}
+.product_icons > div svg {
+  display: flex;
+  color: #464646;
+}
+.product_icons > div span {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 400;
+  margin-top: 10px;
+  color: #464646;
+}
+
+/* query media */
+
+@media screen and (min-width: 0) {
+  .product_icons > div svg {
+    font-size: 24px;
+  }
+  .product_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .product_details {
+    max-width: 100%;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+  }
+  .product_video {
+    max-width: 100%;
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+  }
+  .btn_details button {
+    margin: 1rem 0 1.5rem 0;
+  }
+}
+@media screen and (min-width: 600px) {
+}
+@media screen and (min-width: 900px) {
+  .product_box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .product_details {
+    max-width: 50%;
+    width: 100%;
+  }
+  .product_video {
+    max-width: 42%;
+    width: 100%;
+  }
+  .btn_details button {
+    margin: 0;
+  }
 }
