@@ -15,6 +15,7 @@ import {
   FaShoppingBasket,
   FaSignInAlt,
   FaTimes,
+  FaUserCheck,
   FaUserGraduate,
   FaUserTie,
 } from "react-icons/fa";
@@ -68,7 +69,7 @@ const Navbar = () => {
                 <div className={styles.login}>
                   <span>Dashboard</span>
                   <span>
-                    <FaRegUser />
+                    <FaUserCheck />
                   </span>
                 </div>
               </Link>

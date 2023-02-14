@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { FaUserGraduate } from "react-icons/fa";
 
 // spa
 import { useParams } from "react-router-dom";
@@ -17,11 +18,44 @@ const DetailsProductBox = () => {
   const idMain = params.id - 1;
 
   const product = useContext(ProductsContext);
-  const { id, title, clock, number, price, describtion } = product[idMain];
+  const { id, title, clock, number, price, discribtion, number_sessions } =
+    product[idMain];
 
   return (
     <>
-      <div></div>
+      <div className={styles.product_box}>
+        <div className={styles.product_details}>
+          <img src={github} alt="product_img" />
+          <h1>{title}</h1>
+          <p>{discribtion}</p>
+          <div className={styles.btn_details}>
+            <button>Buy</button>
+            <span>{price}</span>
+          </div>
+        </div>
+        <div className={styles.product_video}>
+          <video
+            controls
+            poster="https://botostart.org/images/posters/javascript.png"
+            width="100%"
+          >
+            <source
+              src="https://botostart.org/courses/other/javascript/videos/1-%20introduction.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className={styles.product_icons}>
+            <div>
+              <FaUserGraduate />
+              <span>{number}</span>
+            </div>
+            <div>
+              <FaUserGraduate />
+              <span>{number_sessions}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
