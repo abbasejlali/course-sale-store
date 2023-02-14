@@ -63,7 +63,6 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className={styles.login_cart}>
-            {console.log(user)}
             {user ? (
               <Link to="/dashboard">
                 <div className={styles.login}>

@@ -1,5 +1,12 @@
 import React, { useContext } from "react";
-import { FaUserGraduate } from "react-icons/fa";
+
+// Icons
+import {
+  FaClock,
+  FaHeadphonesAlt,
+  FaUserClock,
+  FaUserGraduate,
+} from "react-icons/fa";
 
 // spa
 import { useParams } from "react-router-dom";
@@ -50,8 +57,16 @@ const DetailsProductBox = () => {
               <span>{number}</span>
             </div>
             <div>
-              <FaUserGraduate />
+              <FaUserClock />
               <span>{number_sessions}</span>
+            </div>
+            <div>
+              <FaClock />
+              <span>{clock}</span>
+            </div>
+            <div>
+              <FaHeadphonesAlt />
+              <span>Permanent Support</span>
             </div>
           </div>
         </div>

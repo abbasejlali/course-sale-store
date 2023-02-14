@@ -183,10 +183,10 @@
   width: 100%;
   border: 0;
   transition: all 0.3s ease-in-out;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   font-weight: 600;
 }
 .cost_main > a {
