@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 import styles from "./Cartbox.module.css";
 
 // img
-import github from "../img/github.png";
+import github from "../img/github80.png";
 
 // icons
 import { FaRegTrashAlt } from "react-icons/fa";

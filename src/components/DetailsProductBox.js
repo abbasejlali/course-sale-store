@@ -9,6 +9,9 @@ import { ProductsContext } from "../Context/ProductsContextProvider";
 // img
 import github from "../img/github80.png";
 
+// styles
+import styles from "./DetailsProductBox.module.css";
+
 const DetailsProductBox = () => {
   const params = useParams();
   const idMain = params.id - 1;
@@ -18,7 +21,7 @@ const DetailsProductBox = () => {
 
   return (
     <>
-      <div>{title}</div>
+      <div></div>
     </>
   );
 };
