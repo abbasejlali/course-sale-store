@@ -11,14 +11,15 @@ import { FaRegTrashAlt } from "react-icons/fa";
 
 // Context
 import { CartContext } from "../Context/CartContextProvider";
+import { Link } from "react-router-dom";
 
 const Cartbox = ({ products }) => {
-  const { state, dispatch } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
   return (
     <div className={styles.cartbox}>
       <img src={github} alt="img_product" />
       <div className={styles.text}>
-        <h3>{products.title}</h3>
+        <Link to={`/courses/${products.id}`}>{products.title}</Link>
         <span>{products.price} $</span>
       </div>
       <button
