@@ -36,8 +36,8 @@ const DetailsProductBox = () => {
           <h1>{title}</h1>
           <p>{discribtion}</p>
           <div className={styles.btn_details}>
-            <button>Buy</button>
-            <span>{price}</span>
+            <button>Buy Course</button>
+            <span>{price} $</span>
           </div>
         </div>
         <div className={styles.product_video}>
