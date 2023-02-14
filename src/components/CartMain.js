@@ -74,12 +74,6 @@ const CartMain = () => {
               </li>
             </ul>
             <div className={styles.list_main}>
-              {/* {state.checkout && (
-                <h3 className={styles.h3_success}>
-                  Congratulations, you have successfully purchased from Abbas
-                  Ejlali website
-                </h3>
-              )} */}
               {state.selectedItems.map((item) => (
                 <Cartbox key={item.id} products={item} />
               ))}

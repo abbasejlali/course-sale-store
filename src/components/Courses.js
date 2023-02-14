@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 
 // Components
 import Navbar from "./Navbar";
@@ -15,9 +15,13 @@ import { ProductsContext } from "../Context/ProductsContextProvider";
 // components
 import Card from "./Card";
 
-const Courses = () => {
+// spa
+import { useParams } from "react-router-dom";
+
+const Courses = (props) => {
   const products = useContext(ProductsContext);
 
+  const params = useParams();
   const [check, setCheck] = useState(false);
 
   const clickHandeler = () => {
@@ -25,6 +29,7 @@ const Courses = () => {
   };
   return (
     <div>
+      {console.log(params)}
       <Navbar />
       <div
         className={styles.main_cards}
