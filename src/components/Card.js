@@ -43,7 +43,7 @@ const Card = (props) => {
       </div>
       <div className={styles.card_buy}>
         {user && purchasedPR(state, props.data.id) && state.checkout && (
-          <Link to="/dashboard" className={styles.btn_cart}>
+          <Link to={`/courses/${props.data.id}`} className={styles.btn_cart}>
             View course
           </Link>
         )}

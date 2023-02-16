@@ -20,7 +20,7 @@ import { UserContext } from "../Context/UserContextProvider";
 import { CartContext } from "../Context/CartContextProvider";
 
 // functions
-import { ProductTF } from "../helper/function";
+import { ProductTF, purchasedPR } from "../helper/function";
 
 // img
 import github from "../img/github80.png";
@@ -47,23 +47,28 @@ const DetailsProductBox = () => {
             <h1>{title}</h1>
             <p>{discribtion}</p>
             <div className={styles.btn_details}>
-              {user && ProductTF(state, id) && (
+              {user && purchasedPR(state, id) && state.checkout && (
+                <h3 className={styles.btn_cart}>
+                  You are a student of this course.
+                </h3>
+              )}
+              {user && ProductTF(state, id) && !state.checkout && (
                 <Link to="/cart" className={styles.btn_cart}>
                   continue buy
                 </Link>
               )}
-              {user && !ProductTF(state, id) && (
+              {user && !purchasedPR(state, id) && !ProductTF(state, id) && (
                 <Link
                   onClick={() =>
                     dispatch({ type: "ADD_ITEM", payload: product[idMain] })
                   }
                 >
-                  Buy Course
+                  Buy
                 </Link>
               )}
               {!user && !ProductTF(state, id) && (
                 <Link onClick={() => toast.error("please login to site")}>
-                  Buy Course
+                  Buy
                 </Link>
               )}
               <ToastContainer />
