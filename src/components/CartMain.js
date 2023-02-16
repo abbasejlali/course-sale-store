@@ -124,6 +124,7 @@ const CartMain = () => {
               ) : (
                 <Link to="/login">Login To Site</Link>
               )}
+              {console.log(state.purchased_products)}
             </div>
           </div>
         </div>

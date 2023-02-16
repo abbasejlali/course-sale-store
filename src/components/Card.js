@@ -20,7 +20,7 @@ import { CartContext } from "../Context/CartContextProvider";
 import { UserContext } from "../Context/UserContextProvider";
 
 // Function
-import { ProductTF } from "../helper/function";
+import { ProductTF, purchasedPR } from "../helper/function";
 
 const Card = (props) => {
   const { state, dispatch } = useContext(CartContext);
@@ -42,18 +42,27 @@ const Card = (props) => {
         <span className={styles.card_price}>{props.data.price} $</span>
       </div>
       <div className={styles.card_buy}>
-        {user && ProductTF(state, props.data.id) && (
+        {user && purchasedPR(state, props.data.id) && state.checkout && (
+          <Link to="/dashboard" className={styles.btn_cart}>
+            View course
+          </Link>
+        )}
+        {user && ProductTF(state, props.data.id) && !state.checkout && (
           <Link to="/cart" className={styles.btn_cart}>
             continue buy
           </Link>
         )}
-        {user && !ProductTF(state, props.data.id) && (
-          <Link
-            onClick={() => dispatch({ type: "ADD_ITEM", payload: props.data })}
-          >
-            Buy
-          </Link>
-        )}
+        {user &&
+          !purchasedPR(state, props.data.id) &&
+          !ProductTF(state, props.data.id) && (
+            <Link
+              onClick={() =>
+                dispatch({ type: "ADD_ITEM", payload: props.data })
+              }
+            >
+              Buy
+            </Link>
+          )}
         {!user && !ProductTF(state, props.data.id) && (
           <Link onClick={() => toast.error("please login to site")}>Buy</Link>
         )}

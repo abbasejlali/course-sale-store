@@ -6,6 +6,7 @@ const initialState = {
   total: 0,
   discount: 0,
   checkout: false,
+  purchased_products: [],
 };
 
 const sumItems = (items) => {
@@ -34,15 +35,28 @@ const cartReducer = (state, action) => {
           quantity: 1,
         });
       }
+      if (
+        !state.purchased_products.find((item) => item.id === action.payload.id)
+      ) {
+        state.purchased_products.push({
+          ...action.payload,
+          quantity: 1,
+        });
+      }
+
       return {
         ...state,
         selectedItems: [...state.selectedItems],
         ...sumItems(state.selectedItems),
         checkout: false,
+        purchased_products: [...state.purchased_products],
       };
 
     case "REMOVE_ITEM":
       const delecte = state.selectedItems.filter(
+        (item) => item.id !== action.payload.id
+      );
+      const delete2 = state.purchased_products.filter(
         (item) => item.id !== action.payload.id
       );
       return {
@@ -50,6 +64,7 @@ const cartReducer = (state, action) => {
         selectedItems: [...delecte],
         ...sumItems(delecte),
         checkout: false,
+        purchased_products: [...delete2],
       };
 
     case "INCREASE":
@@ -78,6 +93,7 @@ const cartReducer = (state, action) => {
         total: 0,
         discount: 0,
         checkout: true,
+        purchased_products: [...state.purchased_products],
       };
     case "DISCOUNT":
       return {

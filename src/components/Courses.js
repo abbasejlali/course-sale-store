@@ -16,20 +16,20 @@ import { ProductsContext } from "../Context/ProductsContextProvider";
 import Card from "./Card";
 
 // spa
-import { useParams } from "react-router-dom";
+import { CartContext } from "../Context/CartContextProvider";
 
 const Courses = (props) => {
   const products = useContext(ProductsContext);
 
-  const params = useParams();
   const [check, setCheck] = useState(false);
+  const { state } = useContext(CartContext);
 
   const clickHandeler = () => {
     setCheck(!check);
   };
   return (
     <div>
-      {console.log(params)}
+      {console.log(state.purchased_products)}
       <Navbar />
       <div
         className={styles.main_cards}
