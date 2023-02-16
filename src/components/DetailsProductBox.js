@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 // Icons
 import {
   FaClock,
@@ -9,10 +12,15 @@ import {
 } from "react-icons/fa";
 
 // spa
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 // Context
 import { ProductsContext } from "../Context/ProductsContextProvider";
+import { UserContext } from "../Context/UserContextProvider";
+import { CartContext } from "../Context/CartContextProvider";
+
+// functions
+import { ProductTF } from "../helper/function";
 
 // img
 import github from "../img/github80.png";
@@ -23,10 +31,12 @@ import styles from "./DetailsProductBox.module.css";
 const DetailsProductBox = () => {
   const params = useParams();
   const idMain = params.id - 1;
-
   const product = useContext(ProductsContext);
   const { id, title, clock, number, price, discribtion, number_sessions } =
     product[idMain];
+
+  const user = useContext(UserContext);
+  const { state, dispatch } = useContext(CartContext);
 
   return (
     <>
@@ -37,7 +47,27 @@ const DetailsProductBox = () => {
             <h1>{title}</h1>
             <p>{discribtion}</p>
             <div className={styles.btn_details}>
-              <button>Buy Course</button>
+              {/* <button>Buy Course</button> */}
+              {user && ProductTF(state, id) && (
+                <Link to="/cart" className={styles.btn_cart}>
+                  continue buy
+                </Link>
+              )}
+              {user && !ProductTF(state, id) && (
+                <Link
+                  onClick={() =>
+                    dispatch({ type: "ADD_ITEM", payload: product[idMain] })
+                  }
+                >
+                  Buy Course
+                </Link>
+              )}
+              {!user && !ProductTF(state, id) && (
+                <Link onClick={() => toast.error("please login to site")}>
+                  Buy Course
+                </Link>
+              )}
+              <ToastContainer />
               <span>{price} $</span>
             </div>
           </div>

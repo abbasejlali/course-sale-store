@@ -44,7 +44,7 @@ const Card = (props) => {
       <div className={styles.card_buy}>
         {user && ProductTF(state, props.data.id) && (
           <Link to="/cart" className={styles.btn_cart}>
-            continew buy
+            continue buy
           </Link>
         )}
         {user && !ProductTF(state, props.data.id) && (
