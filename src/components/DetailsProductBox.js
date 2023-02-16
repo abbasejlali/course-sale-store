@@ -47,7 +47,6 @@ const DetailsProductBox = () => {
             <h1>{title}</h1>
             <p>{discribtion}</p>
             <div className={styles.btn_details}>
-              {/* <button>Buy Course</button> */}
               {user && ProductTF(state, id) && (
                 <Link to="/cart" className={styles.btn_cart}>
                   continue buy
