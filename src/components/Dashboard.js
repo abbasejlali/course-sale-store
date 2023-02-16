@@ -18,10 +18,13 @@ import { auth } from "./firebase";
 
 // context
 import { UserContext } from "../Context/UserContextProvider";
+import { CartContext } from "../Context/CartContextProvider";
+import CardDashboard from "./CardDashboard";
 
 const Dashboard = () => {
   const navigate = useNavigate();
   const user = useContext(UserContext);
+  const { state } = useContext(CartContext);
 
   const [num, setNum] = useState(0);
 
@@ -93,7 +96,17 @@ const Dashboard = () => {
               </p>
             </div>
           )}
-          {num === 1 && <p>cards</p>}
+          <div className={styles.list_main}>
+            {num === 1 &&
+              state.purchased_products &&
+              state.purchased_products.map((item) => (
+                <CardDashboard id={item.id} data={item} />
+              ))}
+            {num === 1 && !state.purchased_products && (
+              <h3>ooopss, you have not purchased any courses</h3>
+            )}
+          </div>
+
           {num === 2 && <p>license</p>}
         </div>
       </div>

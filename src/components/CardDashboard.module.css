@@ -1,0 +1,120 @@
+.cartbox {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100px;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.cartbox:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.cartbox img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.text span {
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 1.5rem;
+}
+.cartbox > button {
+  padding: 6px 25px;
+  color: rgb(211, 47, 47);
+  background-color: white;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  border: 1px solid rgba(211, 47, 47, 0.5);
+  margin-left: auto;
+}
+.cartbox > button:hover {
+  cursor: pointer;
+
+  border: 1.25px solid rgba(211, 47, 47, 0.5);
+  background-color: rgba(211, 47, 47, 0.052);
+}
+
+.text > span {
+  width: 100%;
+  background-color: white;
+  color: rgb(46, 125, 50);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: 0;
+  outline: 0;
+  background-color: rgb(232, 245, 233);
+  padding: 6px 10px;
+  text-align: center;
+}
+/* query media */
+@media screen and (min-width: 0) {
+  .text a {
+    font-size: 16px;
+  }
+  .text span {
+    font-size: 14px;
+  }
+  .cartbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-cenet;
+    align-items: center;
+  }
+  .text {
+    margin-left: 0;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .cartbox > button {
+    margin-left: 0;
+    margin-top: 0.75rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .text {
+    margin-left: 60px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .cartbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+  .cartbox > button {
+    margin-left: auto;
+    margin-top: 0rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .text a {
+    font-size: 18px;
+  }
+  .text span {
+    font-size: 16px;
+  }
+}
