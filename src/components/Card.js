@@ -43,7 +43,7 @@ const Card = (props) => {
       </div>
       <div className={styles.card_buy}>
         {user && purchasedPR(state, props.data.id) && state.checkout && (
-          <Link to={`/courses/${props.data.id}`} className={styles.btn_cart}>
+          <Link to={`/courses/${props.data.id}`} className={styles.btn_view}>
             View course
           </Link>
         )}
@@ -66,10 +66,14 @@ const Card = (props) => {
         {!user && !ProductTF(state, props.data.id) && (
           <Link onClick={() => toast.error("please login to site")}>Buy</Link>
         )}
-        <div>
-          <Link to={`/courses/${props.data.id}`}>View course</Link>
-          <FaCaretRight />
-        </div>
+        {user && purchasedPR(state, props.data.id) && state.checkout ? (
+          <></>
+        ) : (
+          <div>
+            <Link to={`/courses/${props.data.id}`}>View course</Link>
+            <FaCaretRight />
+          </div>
+        )}
       </div>
       <ToastContainer />
     </div>

@@ -124,6 +124,28 @@
   -ms-transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
   -o-transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
+.card_buy a.btn_view {
+  width: 100%;
+  padding: 6px;
+  background-color: white;
+  color: rgb(126, 87, 194);
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
+  font-size: 0.875rem;
+  transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  border: 1px solid rgba(126, 87, 194, 0.5);
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  -moz-transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  -ms-transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  -o-transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.card_buy a.btn_view:hover,
 .card_buy > a.btn_cart:hover {
   border: 1px solid rgba(126, 87, 194, 0.818);
   background-color: rgba(217, 195, 255, 0.142);

@@ -48,39 +48,35 @@ const DetailsProductBox = () => {
             <p>{discribtion}</p>
             <div className={styles.btn_details}>
               {user && purchasedPR(state, id) && state.checkout && (
-                <>
-                  <h3 className={styles.btn_cart}>
-                    You are a student of this course.
-                  </h3>
-                </>
+                <h3 className={styles.btn_cart}>
+                  You are a student of this course.
+                </h3>
               )}
               {user && ProductTF(state, id) && !state.checkout && (
-                <>
-                  <Link to="/cart" className={styles.btn_cart}>
-                    continue buy
-                  </Link>
-                </>
+                <Link to="/cart" className={styles.btn_cart}>
+                  continue buy
+                </Link>
               )}
               {user && !purchasedPR(state, id) && !ProductTF(state, id) && (
-                <div>
-                  <Link
-                    onClick={() =>
-                      dispatch({ type: "ADD_ITEM", payload: product[idMain] })
-                    }
-                  >
-                    Buy Course
-                  </Link>
-                  <span>{price} $</span>
-                </div>
+                <Link
+                  onClick={() =>
+                    dispatch({ type: "ADD_ITEM", payload: product[idMain] })
+                  }
+                >
+                  Buy Course
+                </Link>
               )}
               {!user && !ProductTF(state, id) && (
-                <div>
-                  <Link onClick={() => toast.error("please login to site")}>
-                    Buy
-                  </Link>
-                  <span>{price} $</span>
-                </div>
+                <Link onClick={() => toast.error("please login to site")}>
+                  Buy
+                </Link>
               )}
+              {user && purchasedPR(state, id) && state.checkout ? (
+                <></>
+              ) : (
+                <span>{price} $</span>
+              )}
+
               <ToastContainer />
             </div>
           </div>
