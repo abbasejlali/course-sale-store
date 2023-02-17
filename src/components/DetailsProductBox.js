@@ -32,8 +32,17 @@ const DetailsProductBox = () => {
   const params = useParams();
   const idMain = params.id - 1;
   const product = useContext(ProductsContext);
-  const { id, title, clock, number, price, discribtion, number_sessions } =
-    product[idMain];
+  const {
+    id,
+    title,
+    clock,
+    number,
+    price,
+    discribtion,
+    number_sessions,
+    headers,
+    headlines,
+  } = product[idMain];
 
   const user = useContext(UserContext);
   const { state, dispatch } = useContext(CartContext);
@@ -110,6 +119,18 @@ const DetailsProductBox = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles.product_describtion}>
+          <ul>
+            <li>
+              <h2>{headers[0].header}</h2>
+              <p>{headers[0].des}</p>
+            </li>
+            <li>
+              <h2>{headers[1].header}</h2>
+              <p>{headers[1].des}</p>
+            </li>
+          </ul>
         </div>
       </div>
     </>

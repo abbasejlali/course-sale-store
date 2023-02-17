@@ -21,6 +21,7 @@ import { UserContext } from "../Context/UserContextProvider";
 
 // Function
 import { ProductTF, purchasedPR } from "../helper/function";
+import CartMain from "./CartMain";
 
 const Card = (props) => {
   const { state, dispatch } = useContext(CartContext);

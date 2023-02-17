@@ -1,10 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-
 // spa
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // styles
 import styles from "./CartMain.module.css";
@@ -19,18 +16,17 @@ import { UserContext } from "../Context/UserContextProvider";
 // img
 import empty_basket from "../img/empty-basket.webp";
 
-const CartMain = () => {
+const CartMain = (props) => {
   const { state, dispatch } = useContext(CartContext);
   const user = useContext(UserContext);
-
-  const navigate = useNavigate();
-
-  const not = () => toast.success("asas");
 
   const [data, setData] = useState("");
 
   const changeHandeler = (e) => {
     setData(e.target.value);
+  };
+  const clickHandeler = (e) => {
+    dispatch({ type: "CHECKOUT" });
   };
 
   return (
@@ -118,9 +114,7 @@ const CartMain = () => {
                 )}
               </div>
               {user ? (
-                <button onClick={() => dispatch({ type: "CHECKOUT" })}>
-                  Complete Purchase
-                </button>
+                <button onClick={clickHandeler}>Complete Purchase</button>
               ) : (
                 <Link to="/login">Login To Site</Link>
               )}

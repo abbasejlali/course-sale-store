@@ -1,7 +1,8 @@
 .product_main {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 80px 16px 100px 16px;
 }
 .product_box {
