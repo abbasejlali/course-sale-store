@@ -24,8 +24,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -33,6 +56,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -42,14 +66,17 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
@@ -65,8 +92,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -74,6 +124,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -83,14 +134,17 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
@@ -106,8 +160,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -115,6 +192,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -124,14 +202,17 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
@@ -147,8 +228,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -156,6 +260,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -165,14 +270,17 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
@@ -188,8 +296,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -197,6 +328,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -206,14 +338,17 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
@@ -229,8 +364,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -238,6 +396,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -247,16 +406,19 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
-          des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.",
+          des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
       ],
     },
@@ -270,8 +432,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -279,6 +464,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -288,14 +474,17 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
@@ -311,8 +500,31 @@ const ProductsContextProvider = ({ children }) => {
       discribtion:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed enim. Velit ut tortor pretium viverra suspendisse potenti nullam. Et molestie ac feugiat sed lectus. Non nisi est sit amet facilisis magna. Dignissim diam quis enim lobortis scelerisque fermentum. Odio ut enim blandit volutpat maecenas volutpat. Ornare lectus sit amet est placerat in egestas erat. Nisi vitae suscipit tellus mauris a diam maecenas sed. Placerat duis ultricies lacus sed turpis tincidunt id aliquet.",
       number_sessions: 49,
+      headline_describtion: [
+        {
+          id: 1,
+          des: "describtion one",
+          time: 10,
+        },
+        {
+          id: 2,
+          des: "describtion two",
+          time: 18,
+        },
+        {
+          id: 3,
+          des: "describtion three",
+          time: 28,
+        },
+        {
+          id: 4,
+          des: "describtion four",
+          time: 15,
+        },
+      ],
       headlines: [
         {
+          id: 1,
           headline: "Course introduction",
           des_one: "Course introduction",
           time_one: 5,
@@ -320,6 +532,7 @@ const ProductsContextProvider = ({ children }) => {
           time_two: 10,
         },
         {
+          id: 2,
           headline: "headline two",
           des_one: "describtion two",
           time_one: 8,
@@ -329,14 +542,17 @@ const ProductsContextProvider = ({ children }) => {
       ],
       headers: [
         {
+          id: 1,
           header: "header one",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 2,
           header: "header two",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },
         {
+          id: 3,
           header: "header three",
           des: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip",
         },

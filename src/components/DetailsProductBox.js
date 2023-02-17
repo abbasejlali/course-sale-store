@@ -8,6 +8,7 @@ import {
   FaChevronDown,
   FaClock,
   FaHeadphonesAlt,
+  FaRegClock,
   FaUserClock,
   FaUserGraduate,
 } from "react-icons/fa";
@@ -43,6 +44,7 @@ const DetailsProductBox = () => {
     number_sessions,
     headers,
     headlines,
+    headline_describtion,
   } = product[idMain];
 
   const user = useContext(UserContext);
@@ -142,9 +144,25 @@ const DetailsProductBox = () => {
             <li>
               <h2>headlines</h2>
               {headlines.map((item) => (
-                <div id={item.id} className={styles.headlin_includes}>
-                  <p>{item.headline}</p>
-                  <FaChevronDown />
+                <div key={item.id} className={styles.headlin_box}>
+                  <div className={styles.headlin_includes}>
+                    <p>{item.headline}</p>
+                    <FaChevronDown />
+                  </div>
+                  {headline_describtion.map((item2) => (
+                    <div key={item2.id} className={styles.headline_productcard}>
+                      <div className={styles.headline_card}>
+                        <div className={styles.headline_title}>
+                          <span>{item2.id}</span>
+                          <p>{item2.des}</p>
+                        </div>
+                        <div className={styles.headline_time}>
+                          <span>{item2.time}</span>
+                          <FaRegClock />
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               ))}
             </li>
