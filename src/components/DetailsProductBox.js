@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 // Icons
 import {
+  FaChevronDown,
   FaClock,
   FaHeadphonesAlt,
   FaUserClock,
@@ -133,6 +134,19 @@ const DetailsProductBox = () => {
             <li>
               <h2>{headers[2].header}</h2>
               <p>{headers[2].des}</p>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.product_headline}>
+          <ul>
+            <li>
+              <h2>headlines</h2>
+              {headlines.map((item) => (
+                <div id={item.id} className={styles.headlin_includes}>
+                  <p>{item.headline}</p>
+                  <FaChevronDown />
+                </div>
+              ))}
             </li>
           </ul>
         </div>
