@@ -130,6 +130,10 @@ const DetailsProductBox = () => {
               <h2>{headers[1].header}</h2>
               <p>{headers[1].des}</p>
             </li>
+            <li>
+              <h2>{headers[2].header}</h2>
+              <p>{headers[2].des}</p>
+            </li>
           </ul>
         </div>
       </div>
