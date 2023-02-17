@@ -149,9 +149,9 @@ const DetailsProductBox = () => {
                     <p>{item.headline}</p>
                     <FaChevronDown />
                   </div>
-                  {headline_describtion.map((item2) => (
-                    <div key={item2.id} className={styles.headline_productcard}>
-                      <div className={styles.headline_card}>
+                  <div className={styles.headline_productcard}>
+                    {headline_describtion.map((item2) => (
+                      <div key={item2.id} className={styles.headline_card}>
                         <div className={styles.headline_title}>
                           <span>{item2.id}</span>
                           <p>{item2.des}</p>
@@ -161,8 +161,8 @@ const DetailsProductBox = () => {
                           <FaRegClock />
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}{" "}
+                  </div>
                 </div>
               ))}
             </li>
