@@ -1,8 +1,12 @@
 import React, { useContext, useState } from "react";
 
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Accordion, AccordionItem } from "@szhsin/react-accordion";
+// material ui
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 // Icons
 import {
   FaChevronDown,
@@ -199,7 +203,7 @@ const DetailsProductBox = () => {
                   )}
                 </div>
               ))} */}
-              <Accordion transition>
+              {/* <Accordion transition>
                 {headlines.map((item) => (
                   <AccordionItem
                     style={{ transition: "height 0.2s ease-in-out" }}
@@ -230,6 +234,22 @@ const DetailsProductBox = () => {
                     </div>
                   </AccordionItem>
                 ))}
+              </Accordion> */}
+              <Accordion>
+                <AccordionSummary
+                  // expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Accordion 1</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
               </Accordion>
             </li>
           </ul>
