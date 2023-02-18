@@ -1,12 +1,14 @@
 import React, { useContext, useState } from "react";
 
-// material ui
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+// material Ui
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // Icons
 import {
   FaChevronDown,
@@ -235,22 +237,32 @@ const DetailsProductBox = () => {
                   </AccordionItem>
                 ))}
               </Accordion> */}
-              <Accordion>
-                <AccordionSummary
-                  // expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>Accordion 1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              {headlines.map((item) => (
+                <Accordion key={item.id}>
+                  <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls={`panel${item.id}a-content`}
+                    id={`panel${item.id}a-header`}
+                  >
+                    <Typography>{item.headline}</Typography>
+                  </AccordionSummary>
+
+                  <AccordionDetails className={styles.headline_productcard}>
+                    {headline_describtion.map((item2) => (
+                      <Typography key={item2.id}>
+                        <div className={styles.headline_title}>
+                          <span>{item2.id}</span>
+                          <p>{item2.des}</p>
+                        </div>
+                        <div className={styles.headline_time}>
+                          <span>{item2.time} Min</span>
+                          <FaRegClock />
+                        </div>
+                      </Typography>
+                    ))}
+                  </AccordionDetails>
+                </Accordion>
+              ))}
             </li>
           </ul>
         </div>
