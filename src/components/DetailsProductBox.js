@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 // Icons
 import {
   FaChevronDown,
@@ -47,11 +47,18 @@ const DetailsProductBox = () => {
     headline_describtion,
   } = product[idMain];
 
+  const [open, setOpen] = useState(false);
+
   const user = useContext(UserContext);
   const { state, dispatch } = useContext(CartContext);
 
+  const clickHandeler = () => {
+    setOpen(!open);
+  };
+
   return (
     <>
+      {console.log(open)}
       <div className={styles.product_main}>
         <div className={styles.product_box}>
           <div className={styles.product_details}>
@@ -141,30 +148,89 @@ const DetailsProductBox = () => {
         </div>
         <div className={styles.product_headline}>
           <ul>
-            <li>
+            <li className={styles.headlines_li}>
               <h2>headlines</h2>
-              {headlines.map((item) => (
+              {/* {headlines.map((item) => (
                 <div key={item.id} className={styles.headlin_box}>
-                  <div className={styles.headlin_includes}>
+                  <div
+                    className={styles.headlin_includes}
+                    onClick={() => {
+                      if (item.id === 1) {
+                        setOpen(!open);
+                      } else if (item.id === 2) {
+                        setOpen(!open);
+                      }
+                    }}
+                  >
                     <p>{item.headline}</p>
                     <FaChevronDown />
                   </div>
-                  <div className={styles.headline_productcard}>
-                    {headline_describtion.map((item2) => (
-                      <div key={item2.id} className={styles.headline_card}>
-                        <div className={styles.headline_title}>
-                          <span>{item2.id}</span>
-                          <p>{item2.des}</p>
+                  {open && item.id === 1 && (
+                    <div className={styles.headline_productcard}>
+                      {headline_describtion.map((item2) => (
+                        <div key={item2.id} className={styles.headline_card}>
+                          <div className={styles.headline_title}>
+                            <span>{item2.id}</span>
+                            <p>{item2.des}</p>
+                          </div>
+                          <div className={styles.headline_time}>
+                            <span>{item2.time} Min</span>
+                            <FaRegClock />
+                          </div>
                         </div>
-                        <div className={styles.headline_time}>
-                          <span>{item2.time}</span>
-                          <FaRegClock />
+                      ))}{" "}
+                    </div>
+                  )}
+                  {open && item.id === 2 && (
+                    <div className={styles.headline_productcard}>
+                      {headline_describtion.map((item2) => (
+                        <div key={item2.id} className={styles.headline_card}>
+                          <div className={styles.headline_title}>
+                            <span>{item2.id}</span>
+                            <p>{item2.des}</p>
+                          </div>
+                          <div className={styles.headline_time}>
+                            <span>{item2.time} Min</span>
+                            <FaRegClock />
+                          </div>
+                        </div>
+                      ))}{" "}
+                    </div>
+                  )}
+                </div>
+              ))} */}
+              <Accordion transition>
+                {headlines.map((item) => (
+                  <AccordionItem
+                    style={{ transition: "height 0.2s ease-in-out" }}
+                    key={item.id}
+                    className={styles.headlin_box}
+                    header={
+                      <div className={styles.headlin_box}>
+                        <div className={styles.headlin_includes}>
+                          <p>{item.headline}</p>
+                          <FaChevronDown />
                         </div>
                       </div>
-                    ))}{" "}
-                  </div>
-                </div>
-              ))}
+                    }
+                  >
+                    <div className={styles.headline_productcard}>
+                      {headline_describtion.map((item2) => (
+                        <div key={item2.id} className={styles.headline_card}>
+                          <div className={styles.headline_title}>
+                            <span>{item2.id}</span>
+                            <p>{item2.des}</p>
+                          </div>
+                          <div className={styles.headline_time}>
+                            <span>{item2.time} Min</span>
+                            <FaRegClock />
+                          </div>
+                        </div>
+                      ))}{" "}
+                    </div>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </li>
           </ul>
         </div>
