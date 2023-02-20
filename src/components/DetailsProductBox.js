@@ -37,7 +37,7 @@ import github from "../img/github80.png";
 
 // styles
 import styles from "./DetailsProductBox.module.css";
-import axios from "axios";
+import Popup from "./Popup";
 const DetailsProductBox = () => {
   const params = useParams();
   const idMain = params.id - 1;
@@ -55,28 +55,20 @@ const DetailsProductBox = () => {
     headline_describtion,
   } = product[idMain];
 
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const user = useContext(UserContext);
   const { state, dispatch } = useContext(CartContext);
 
-  const clickHandeler = () => {
-    setOpen(!open);
-  };
-
-  const handleDownload = (url, filename) => {
-    axios
-      .get(url, {
-        responseType: "blob",
-      })
-      .then((res) => {
-        fileDownload(res.data, filename);
-      });
-  };
+  // const openHandeler = () => {
+  //   setOpen(true);
+  // };
+  // const exitHandeler = () => {
+  //   setOpen(false);
+  // };
 
   return (
     <>
-      {console.log(open)}
       <div className={styles.product_main}>
         <div className={styles.product_box}>
           <div className={styles.product_details}>
@@ -182,43 +174,69 @@ const DetailsProductBox = () => {
 
                   <AccordionDetails className={styles.headline_productcard}>
                     {headline_describtion.map((item2) => (
-                      <Typography key={item2.id}>
-                        <div className={styles.headline_main}>
-                          <div className={styles.headline_title}>
-                            <span>{item2.id}</span>
-                            <p>{item2.des}</p>
-                          </div>
-                          <div className={styles.headline_time}>
-                            <span>{item2.time} Min</span>
-                            <FaRegClock />
-                          </div>
-                        </div>
-                        {user && purchasedPR(state, product[idMain].id) && (
-                          <div className={styles.get_product}>
-                            <div className={styles.view_video}>
-                              <a
-                                href={`${item2.view_video}`}
-                                className={styles.btn_video}
-                                target="_blank"
-                              >
-                                <FaRegPlayCircle />
-                                <span>View Video</span>
-                              </a>
+                      <>
+                        <Typography key={item2.id}>
+                          <div className={styles.headline_main}>
+                            <div className={styles.headline_title}>
+                              <span>{item2.id}</span>
+                              <p>{item2.des}</p>
                             </div>
-                            <div className={styles.download_video}>
-                              <a
-                                href={`${item2.downlaod_video}`}
-                                className={styles.btn_video}
-                                target="_blank"
-                                download
-                              >
-                                <FaCloudDownloadAlt />
-                                <span>Download Video</span>
-                              </a>
+                            <div className={styles.headline_time}>
+                              <span>{item2.time} Min</span>
+                              <FaRegClock />
                             </div>
                           </div>
-                        )}
-                      </Typography>
+                          {user && purchasedPR(state, product[idMain].id) && (
+                            <div className={styles.get_product}>
+                              <div className={styles.view_video}>
+                                <a
+                                  href={`${item2.view_video}`}
+                                  className={styles.btn_video}
+                                  // onClick={openHandeler}
+                                >
+                                  <FaRegPlayCircle />
+                                  <span>View Video</span>
+                                </a>
+                              </div>
+                              <div className={styles.download_video}>
+                                <a
+                                  href={`${item2.downlaod_video}`}
+                                  className={styles.btn_video}
+                                  download
+                                >
+                                  <FaCloudDownloadAlt />
+                                  <span>Download Video</span>
+                                </a>
+                              </div>
+                            </div>
+                          )}
+                        </Typography>
+                        {/* {open && (
+                          <Popup
+                            content={
+                              // <div className={styles.buy_video}>
+                              //   <video>
+                              //     <source
+                              //       src={item2.view_video}
+                              //       type="video/mp4"
+                              //     ></source>
+                              //   </video>
+                              // </div>
+                              <div className="popup-box">
+                                <div className="box">
+                                  <span
+                                    className="close-icon"
+                                    onClick={exitHandeler}
+                                  >
+                                    x
+                                  </span>
+                                  {props.content}
+                                </div>
+                              </div>
+                            }
+                          />
+                        )} */}
+                      </>
                     ))}
                   </AccordionDetails>
                 </Accordion>
