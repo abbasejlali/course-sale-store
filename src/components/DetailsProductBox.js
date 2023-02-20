@@ -9,6 +9,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
 // Icons
 import {
   FaClock,
@@ -16,6 +17,8 @@ import {
   FaRegClock,
   FaUserClock,
   FaUserGraduate,
+  FaRegPlayCircle,
+  FaCloudDownloadAlt,
 } from "react-icons/fa";
 
 // spa
@@ -170,14 +173,32 @@ const DetailsProductBox = () => {
                   <AccordionDetails className={styles.headline_productcard}>
                     {headline_describtion.map((item2) => (
                       <Typography key={item2.id}>
-                        <div className={styles.headline_title}>
-                          <span>{item2.id}</span>
-                          <p>{item2.des}</p>
+                        <div className={styles.headline_main}>
+                          <div className={styles.headline_title}>
+                            <span>{item2.id}</span>
+                            <p>{item2.des}</p>
+                          </div>
+                          <div className={styles.headline_time}>
+                            <span>{item2.time} Min</span>
+                            <FaRegClock />
+                          </div>
                         </div>
-                        <div className={styles.headline_time}>
-                          <span>{item2.time} Min</span>
-                          <FaRegClock />
-                        </div>
+                        {user && purchasedPR(state, product[idMain].id) && (
+                          <div className={styles.get_product}>
+                            <div className={styles.view_video}>
+                              <button className={styles.btn_video}>
+                                <FaRegPlayCircle />
+                                <span>View Video</span>
+                              </button>
+                            </div>
+                            <div className={styles.download_video}>
+                              <button className={styles.btn_video}>
+                                <FaCloudDownloadAlt />
+                                <span>Download Video</span>
+                              </button>
+                            </div>
+                          </div>
+                        )}
                       </Typography>
                     ))}
                   </AccordionDetails>
