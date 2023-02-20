@@ -11,7 +11,6 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // Icons
 import {
-  FaChevronDown,
   FaClock,
   FaHeadphonesAlt,
   FaRegClock,
@@ -156,87 +155,6 @@ const DetailsProductBox = () => {
           <ul>
             <li className={styles.headlines_li}>
               <h2>headlines</h2>
-              {/* {headlines.map((item) => (
-                <div key={item.id} className={styles.headlin_box}>
-                  <div
-                    className={styles.headlin_includes}
-                    onClick={() => {
-                      if (item.id === 1) {
-                        setOpen(!open);
-                      } else if (item.id === 2) {
-                        setOpen(!open);
-                      }
-                    }}
-                  >
-                    <p>{item.headline}</p>
-                    <FaChevronDown />
-                  </div>
-                  {open && item.id === 1 && (
-                    <div className={styles.headline_productcard}>
-                      {headline_describtion.map((item2) => (
-                        <div key={item2.id} className={styles.headline_card}>
-                          <div className={styles.headline_title}>
-                            <span>{item2.id}</span>
-                            <p>{item2.des}</p>
-                          </div>
-                          <div className={styles.headline_time}>
-                            <span>{item2.time} Min</span>
-                            <FaRegClock />
-                          </div>
-                        </div>
-                      ))}{" "}
-                    </div>
-                  )}
-                  {open && item.id === 2 && (
-                    <div className={styles.headline_productcard}>
-                      {headline_describtion.map((item2) => (
-                        <div key={item2.id} className={styles.headline_card}>
-                          <div className={styles.headline_title}>
-                            <span>{item2.id}</span>
-                            <p>{item2.des}</p>
-                          </div>
-                          <div className={styles.headline_time}>
-                            <span>{item2.time} Min</span>
-                            <FaRegClock />
-                          </div>
-                        </div>
-                      ))}{" "}
-                    </div>
-                  )}
-                </div>
-              ))} */}
-              {/* <Accordion transition>
-                {headlines.map((item) => (
-                  <AccordionItem
-                    style={{ transition: "height 0.2s ease-in-out" }}
-                    key={item.id}
-                    className={styles.headlin_box}
-                    header={
-                      <div className={styles.headlin_box}>
-                        <div className={styles.headlin_includes}>
-                          <p>{item.headline}</p>
-                          <FaChevronDown />
-                        </div>
-                      </div>
-                    }
-                  >
-                    <div className={styles.headline_productcard}>
-                      {headline_describtion.map((item2) => (
-                        <div key={item2.id} className={styles.headline_card}>
-                          <div className={styles.headline_title}>
-                            <span>{item2.id}</span>
-                            <p>{item2.des}</p>
-                          </div>
-                          <div className={styles.headline_time}>
-                            <span>{item2.time} Min</span>
-                            <FaRegClock />
-                          </div>
-                        </div>
-                      ))}{" "}
-                    </div>
-                  </AccordionItem>
-                ))}
-              </Accordion> */}
               {headlines.map((item) => (
                 <Accordion key={item.id}>
                   <AccordionSummary
@@ -244,7 +162,9 @@ const DetailsProductBox = () => {
                     aria-controls={`panel${item.id}a-content`}
                     id={`panel${item.id}a-header`}
                   >
-                    <Typography>{item.headline}</Typography>
+                    <Typography>
+                      Headlin {item.id} :{item.headline}
+                    </Typography>
                   </AccordionSummary>
 
                   <AccordionDetails className={styles.headline_productcard}>
