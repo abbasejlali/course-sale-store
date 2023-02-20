@@ -37,7 +37,7 @@ import github from "../img/github80.png";
 
 // styles
 import styles from "./DetailsProductBox.module.css";
-
+import axios from "axios";
 const DetailsProductBox = () => {
   const params = useParams();
   const idMain = params.id - 1;
@@ -62,6 +62,16 @@ const DetailsProductBox = () => {
 
   const clickHandeler = () => {
     setOpen(!open);
+  };
+
+  const handleDownload = (url, filename) => {
+    axios
+      .get(url, {
+        responseType: "blob",
+      })
+      .then((res) => {
+        fileDownload(res.data, filename);
+      });
   };
 
   return (
@@ -186,16 +196,25 @@ const DetailsProductBox = () => {
                         {user && purchasedPR(state, product[idMain].id) && (
                           <div className={styles.get_product}>
                             <div className={styles.view_video}>
-                              <button className={styles.btn_video}>
+                              <a
+                                href={`${item2.view_video}`}
+                                className={styles.btn_video}
+                                target="_blank"
+                              >
                                 <FaRegPlayCircle />
                                 <span>View Video</span>
-                              </button>
+                              </a>
                             </div>
                             <div className={styles.download_video}>
-                              <button className={styles.btn_video}>
+                              <a
+                                href={`${item2.downlaod_video}`}
+                                className={styles.btn_video}
+                                target="_blank"
+                                download
+                              >
                                 <FaCloudDownloadAlt />
                                 <span>Download Video</span>
-                              </button>
+                              </a>
                             </div>
                           </div>
                         )}

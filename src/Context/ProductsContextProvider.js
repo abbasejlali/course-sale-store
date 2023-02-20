@@ -29,21 +29,37 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
       ],
       headlines: [
@@ -97,21 +113,41 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
+          
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
+          
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
+          
         },
       ],
       headlines: [
@@ -165,21 +201,37 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
       ],
       headlines: [
@@ -233,21 +285,37 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
       ],
       headlines: [
@@ -301,21 +369,37 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
       ],
       headlines: [
@@ -369,21 +453,37 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
       ],
       headlines: [
@@ -437,21 +537,37 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
       ],
       headlines: [
@@ -505,21 +621,37 @@ const ProductsContextProvider = ({ children }) => {
           id: 1,
           des: "describtion one",
           time: 10,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 2,
           des: "describtion two",
           time: 18,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 3,
           des: "describtion three",
           time: 28,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
         {
           id: 4,
           des: "describtion four",
           time: 15,
+          view_video:
+            "https://botostart.org/courses/free/mobile-first/videos/1-%20mobile%20first.mp4",
+          downlaod_video:
+            "https://botostart.org/courses/free/mobile-first/files/1-%20mobile%20first.rar",
         },
       ],
       headlines: [
