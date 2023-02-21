@@ -44,7 +44,10 @@ const Dashboard = () => {
   const num2Handeler = () => {
     setNum(2);
   };
-
+  const [open, setOpen] = useState(false);
+  const clickHandeler = () => {
+    setOpen(!open);
+  };
   return (
     <>
       <div className={styles.dashboard_main}>
@@ -80,11 +83,17 @@ const Dashboard = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.dashboard_mobile}>
+      <div className={styles.dashboard_mobile} onClick={clickHandeler}>
         <FaEllipsisV />
         <span>Account menu</span>
       </div>
-      <nav className={styles.menu_mobile}>
+      <nav
+        className={styles.menu_mobile}
+        style={{
+          opacity: `${open ? "1" : "0"}`,
+          display: `${open ? "flex" : "none"}`,
+        }}
+      >
         <ul>
           <li onClick={num0Handeler}>
             <span>

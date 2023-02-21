@@ -35,6 +35,13 @@ const Navbar = () => {
   const clickHandler = (e) => {
     setMenu_mobile(!menu_mobile);
   };
+  useEffect(() => {
+    if (menu_mobile) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [menu_mobile]);
 
   return (
     <>
@@ -99,7 +106,7 @@ const Navbar = () => {
             backgroundColor: "rgba(0, 0, 0, 0.5)",
             position: "absolute",
             top: "0",
-            zIndex: "0",
+            zIndex: "9999",
             transition: "left 5s ease-in-out",
             left: `${menu_mobile ? "0" : "-100vw"}`,
           }}
