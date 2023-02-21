@@ -18,6 +18,7 @@ const Cards = () => {
 
   return (
     <section>
+      {/* create by abbas ejlali */}
       <div className={styles.cards}>
         {products.map((item) => (
           <Card key={item.id} data={item} />

@@ -24,6 +24,7 @@ const CommentsCard = ({ data_comments }) => {
         </div>
         <div>
           <p>{data_comments.comment}</p>
+          {/* create by abbas ejlali */}
         </div>
       </div>
       <div className={styles.comment_video}>

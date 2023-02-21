@@ -10,6 +10,7 @@ const Cart = () => {
     <>
       <Navbar />
       <CartMain />
+      {/* create by abbas ejlali */}
       <Footer />
     </>
   );

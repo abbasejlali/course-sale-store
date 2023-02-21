@@ -36,6 +36,7 @@ const Courses = (props) => {
         style={{ margin: "80px auto 180px auto" }}
       >
         <div className={styles.titr_cards}>
+          {/* create by abbas ejlali */}
           <ul>
             <li>
               <h2>Programming Training Courses</h2>
