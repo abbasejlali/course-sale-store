@@ -319,7 +319,7 @@
   color: rgba(0, 0, 0, 0.6);
   margin: 0px 0px 0px 4px;
 }
-.headline_productcard  div.buy_video {
+.headline_productcard div.buy_video {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -398,6 +398,10 @@
   .btn_details a {
     margin: 1rem 0 1.5rem 0;
   }
+
+  .btn_details > h3.btn_cart {
+    margin-bottom: 1rem;
+  }
   .btn_details > h3.btn_cart,
   .btn_details > a.btn_cart,
   .btn_details a {
@@ -471,5 +475,8 @@
   .headline_card {
     padding-left: 12px;
     padding-right: 12px;
+  }
+  .btn_details > h3.btn_cart {
+    margin-bottom: 0;
   }
 }
