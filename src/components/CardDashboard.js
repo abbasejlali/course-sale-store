@@ -21,7 +21,7 @@ const CardDashboard = ({ data }) => {
           <h3>{data.title}</h3>
           <span>To view course, refer to the course page.</span>
         </div>
-        <Link to={`/courses/${data.id}`}>مشاهده دوره</Link>
+        <Link to={`/courses/${data.id}`}>View Course</Link>
       </div>
     </div>
   );

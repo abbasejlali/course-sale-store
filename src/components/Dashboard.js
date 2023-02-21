@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 // icons
 import {
   FaBarcode,
+  FaEllipsisV,
   FaHome,
   FaRegHeart,
   FaSignInAlt,
@@ -79,6 +80,38 @@ const Dashboard = () => {
           </li>
         </ul>
       </div>
+      <div className={styles.dashboard_mobile}>
+        <FaEllipsisV />
+        <span>Account menu</span>
+      </div>
+      <nav className={styles.menu_mobile}>
+        <ul>
+          <li onClick={num0Handeler}>
+            <span>
+              <FaHome />
+            </span>
+            <span>User Accont</span>
+          </li>
+          <li onClick={num1Handeler}>
+            <span>
+              <FaUserGraduate />
+            </span>
+            <span>My Courses</span>
+          </li>
+          <li onClick={num2Handeler}>
+            <span>
+              <FaBarcode />
+            </span>
+            <span>license</span>
+          </li>
+          <li onClick={exitHandeler}>
+            <span>
+              <FaSignInAlt />
+            </span>
+            <span>Exit</span>
+          </li>
+        </ul>
+      </nav>
       <div className={styles.dashboard_info}>
         <div className={styles.dashboard_iclude}>
           {num === 0 && (
