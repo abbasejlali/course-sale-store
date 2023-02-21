@@ -102,9 +102,10 @@ const Dashboard = () => {
               state.purchased_products.map((item) => (
                 <CardDashboard id={item.id} data={item} />
               ))}
-            {num === 1 && !state.purchased_products && (
-              <h3>ooopss, you have not purchased any courses</h3>
+            {num === 1 && !state.purchased_products.length && (
+              <h3>ooops, you have not purchased any courses</h3>
             )}
+            {console.log(state.purchased_products)}
           </div>
 
           {num === 2 && <p>license</p>}

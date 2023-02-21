@@ -17,8 +17,11 @@ const CardDashboard = ({ data }) => {
     <div className={styles.cartbox}>
       <img src={github} alt="img_product" />
       <div className={styles.text}>
-        <Link to={`/courses/${data.id}`}>{data.title}</Link>
-        <span>You have purchased this course</span>
+        <div>
+          <h3>{data.title}</h3>
+          <span>To view course, refer to the course page.</span>
+        </div>
+        <Link to={`/courses/${data.id}`}>مشاهده دوره</Link>
       </div>
     </div>
   );

@@ -55,17 +55,8 @@ const DetailsProductBox = () => {
     headline_describtion,
   } = product[idMain];
 
-  // const [open, setOpen] = useState(false);
-
   const user = useContext(UserContext);
   const { state, dispatch } = useContext(CartContext);
-
-  // const openHandeler = () => {
-  //   setOpen(true);
-  // };
-  // const exitHandeler = () => {
-  //   setOpen(false);
-  // };
 
   return (
     <>
@@ -192,7 +183,6 @@ const DetailsProductBox = () => {
                                 <a
                                   href={`${item2.view_video}`}
                                   className={styles.btn_video}
-                                  // onClick={openHandeler}
                                 >
                                   <FaRegPlayCircle />
                                   <span>View Video</span>
@@ -211,31 +201,6 @@ const DetailsProductBox = () => {
                             </div>
                           )}
                         </Typography>
-                        {/* {open && (
-                          <Popup
-                            content={
-                              // <div className={styles.buy_video}>
-                              //   <video>
-                              //     <source
-                              //       src={item2.view_video}
-                              //       type="video/mp4"
-                              //     ></source>
-                              //   </video>
-                              // </div>
-                              <div className="popup-box">
-                                <div className="box">
-                                  <span
-                                    className="close-icon"
-                                    onClick={exitHandeler}
-                                  >
-                                    x
-                                  </span>
-                                  {props.content}
-                                </div>
-                              </div>
-                            }
-                          />
-                        )} */}
                       </>
                     ))}
                   </AccordionDetails>
