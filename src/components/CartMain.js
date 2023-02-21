@@ -28,6 +28,10 @@ const CartMain = (props) => {
   const clickHandeler = (e) => {
     dispatch({ type: "CHECKOUT" });
   };
+  useEffect(() => {
+    console.log(`aaaaaaaa ${state.discount}`);
+    console.log(`bbbbbbb ${state.total}`);
+  }, [state.total, state.discount]);
 
   return (
     <>
