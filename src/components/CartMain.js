@@ -125,6 +125,7 @@ const CartMain = (props) => {
               {console.log(state.purchased_products)}
             </div>
           </div>
+          {/* create by abbas ejlali */}
         </div>
       )}
     </>
