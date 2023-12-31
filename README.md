@@ -11,19 +11,19 @@ https://silver-stroopwafel-4b452b.netlify.app/
 
 **تکنولوژی های مورد استفاده :**
 
-React Js
+:black_medium_small_square: React Js
 
-JavaScript
+:black_medium_small_square: JavaScript
 
-Responsive
+:black_medium_small_square: Responsive
 
-Rest Api
+:black_medium_small_square: Rest Api
 
-UseContext
+:black_medium_small_square: UseContext
 
-React router dom
+:black_medium_small_square: React router dom
 
-Firebase 
+:black_medium_small_square: Firebase
 
 
 
